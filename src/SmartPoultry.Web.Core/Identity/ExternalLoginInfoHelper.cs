@@ -1,7 +1,7 @@
-﻿using Abp.Extensions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using Abp.Extensions;
 
 namespace SmartPoultry.Identity
 {

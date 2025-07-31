@@ -1,62 +1,63 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SmartPoultry.Migrations;
-
-public partial class Upgrade_To_ABP_6_1_1 : Migration
+namespace SmartPoultry.Migrations
 {
-    protected override void Up(MigrationBuilder migrationBuilder)
+    public partial class Upgrade_To_ABP_6_1_1 : Migration
     {
-        migrationBuilder.DropPrimaryKey("PK_AbpDynamicPropertyValues", "AbpDynamicPropertyValues");
-        migrationBuilder.DropColumn("Id", "AbpDynamicPropertyValues");
-        migrationBuilder.AddColumn<long>(
-                name: "Id",
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropPrimaryKey("PK_AbpDynamicPropertyValues", "AbpDynamicPropertyValues");
+            migrationBuilder.DropColumn("Id", "AbpDynamicPropertyValues");
+            migrationBuilder.AddColumn<long>(
+                    name: "Id",
+                    table: "AbpDynamicPropertyValues",
+                    nullable: false)
+                .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_AbpDynamicPropertyValues",
                 table: "AbpDynamicPropertyValues",
-                nullable: false)
-            .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-        migrationBuilder.AddPrimaryKey(
-            name: "PK_AbpDynamicPropertyValues",
-            table: "AbpDynamicPropertyValues",
-            columns: new[] { "Id" });
+                columns: new[] { "Id" });
 
-        migrationBuilder.DropPrimaryKey("PK_AbpDynamicEntityPropertyValues", "AbpDynamicEntityPropertyValues");
-        migrationBuilder.DropColumn("Id", "AbpDynamicEntityPropertyValues");
-        migrationBuilder.AddColumn<long>(
-                name: "Id",
+            migrationBuilder.DropPrimaryKey("PK_AbpDynamicEntityPropertyValues", "AbpDynamicEntityPropertyValues");
+            migrationBuilder.DropColumn("Id", "AbpDynamicEntityPropertyValues");
+            migrationBuilder.AddColumn<long>(
+                    name: "Id",
+                    table: "AbpDynamicEntityPropertyValues",
+                    nullable: false)
+                .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_AbpDynamicEntityPropertyValues",
                 table: "AbpDynamicEntityPropertyValues",
-                nullable: false)
-            .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                columns: new[] { "Id" });
+        }
 
-        migrationBuilder.AddPrimaryKey(
-            name: "PK_AbpDynamicEntityPropertyValues",
-            table: "AbpDynamicEntityPropertyValues",
-            columns: new[] { "Id" });
-    }
-
-    protected override void Down(MigrationBuilder migrationBuilder)
-    {
-        migrationBuilder.DropPrimaryKey("PK_AbpDynamicPropertyValues", "AbpDynamicPropertyValues");
-        migrationBuilder.DropColumn("Id", "AbpDynamicPropertyValues");
-        migrationBuilder.AddColumn<int>(
-                name: "Id",
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropPrimaryKey("PK_AbpDynamicPropertyValues", "AbpDynamicPropertyValues");
+            migrationBuilder.DropColumn("Id", "AbpDynamicPropertyValues");
+            migrationBuilder.AddColumn<int>(
+                    name: "Id",
+                    table: "AbpDynamicPropertyValues",
+                    nullable: false)
+                .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_AbpDynamicPropertyValues",
                 table: "AbpDynamicPropertyValues",
-                nullable: false)
-            .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-        migrationBuilder.AddPrimaryKey(
-            name: "PK_AbpDynamicPropertyValues",
-            table: "AbpDynamicPropertyValues",
-            columns: new[] { "Id" });
+                columns: new[] { "Id" });
 
-        migrationBuilder.DropPrimaryKey("PK_AbpDynamicEntityPropertyValues", "AbpDynamicEntityPropertyValues");
-        migrationBuilder.DropColumn("Id", "AbpDynamicEntityPropertyValues");
-        migrationBuilder.AddColumn<int>(
-                name: "Id",
+            migrationBuilder.DropPrimaryKey("PK_AbpDynamicEntityPropertyValues", "AbpDynamicEntityPropertyValues");
+            migrationBuilder.DropColumn("Id", "AbpDynamicEntityPropertyValues");
+            migrationBuilder.AddColumn<int>(
+                    name: "Id",
+                    table: "AbpDynamicEntityPropertyValues",
+                    nullable: false)
+                .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_AbpDynamicEntityPropertyValues",
                 table: "AbpDynamicEntityPropertyValues",
-                nullable: false)
-            .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-        migrationBuilder.AddPrimaryKey(
-            name: "PK_AbpDynamicEntityPropertyValues",
-            table: "AbpDynamicEntityPropertyValues",
-            columns: new[] { "Id" });
+                columns: new[] { "Id" });
+        }
     }
 }

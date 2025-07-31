@@ -1,6 +1,6 @@
-﻿using Abp.Auditing;
+﻿using System.ComponentModel.DataAnnotations;
+using Abp.Auditing;
 using Abp.Authorization.Users;
-using System.ComponentModel.DataAnnotations;
 
 namespace SmartPoultry.Models.TokenAuth
 {

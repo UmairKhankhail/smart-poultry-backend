@@ -6,32 +6,33 @@ using SmartPoultry.EntityFrameworkCore;
 using SmartPoultry.Web.Startup;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 
-namespace SmartPoultry.Web.Tests;
-
-[DependsOn(
-    typeof(SmartPoultryWebMvcModule),
-    typeof(AbpAspNetCoreTestBaseModule)
-)]
-public class SmartPoultryWebTestModule : AbpModule
+namespace SmartPoultry.Web.Tests
 {
-    public SmartPoultryWebTestModule(SmartPoultryEntityFrameworkModule abpProjectNameEntityFrameworkModule)
+    [DependsOn(
+        typeof(SmartPoultryWebMvcModule),
+        typeof(AbpAspNetCoreTestBaseModule)
+    )]
+    public class SmartPoultryWebTestModule : AbpModule
     {
-        abpProjectNameEntityFrameworkModule.SkipDbContextRegistration = true;
-    }
+        public SmartPoultryWebTestModule(SmartPoultryEntityFrameworkModule abpProjectNameEntityFrameworkModule)
+        {
+            abpProjectNameEntityFrameworkModule.SkipDbContextRegistration = true;
+        } 
+        
+        public override void PreInitialize()
+        {
+            Configuration.UnitOfWork.IsTransactional = false; //EF Core InMemory DB does not support transactions.
+        }
 
-    public override void PreInitialize()
-    {
-        Configuration.UnitOfWork.IsTransactional = false; //EF Core InMemory DB does not support transactions.
-    }
-
-    public override void Initialize()
-    {
-        IocManager.RegisterAssemblyByConvention(typeof(SmartPoultryWebTestModule).GetAssembly());
-    }
-
-    public override void PostInitialize()
-    {
-        IocManager.Resolve<ApplicationPartManager>()
-            .AddApplicationPartsIfNotAddedBefore(typeof(SmartPoultryWebMvcModule).Assembly);
+        public override void Initialize()
+        {
+            IocManager.RegisterAssemblyByConvention(typeof(SmartPoultryWebTestModule).GetAssembly());
+        }
+        
+        public override void PostInitialize()
+        {
+            IocManager.Resolve<ApplicationPartManager>()
+                .AddApplicationPartsIfNotAddedBefore(typeof(SmartPoultryWebMvcModule).Assembly);
+        }
     }
 }

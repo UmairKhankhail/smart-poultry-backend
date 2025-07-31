@@ -1,22 +1,23 @@
+using System;
+using Castle.Core.Logging;
 using Abp.Dependency;
 using Abp.Timing;
-using Castle.Core.Logging;
-using System;
 
-namespace SmartPoultry.Migrator;
-
-public class Log : ITransientDependency
+namespace SmartPoultry.Migrator
 {
-    public ILogger Logger { get; set; }
-
-    public Log()
+    public class Log : ITransientDependency
     {
-        Logger = NullLogger.Instance;
-    }
+        public ILogger Logger { get; set; }
 
-    public void Write(string text)
-    {
-        Console.WriteLine(Clock.Now.ToString("yyyy-MM-dd HH:mm:ss") + " | " + text);
-        Logger.Info(text);
+        public Log()
+        {
+            Logger = NullLogger.Instance;
+        }
+
+        public void Write(string text)
+        {
+            Console.WriteLine(Clock.Now.ToString("yyyy-MM-dd HH:mm:ss") + " | " + text);
+            Logger.Info(text);
+        }
     }
 }

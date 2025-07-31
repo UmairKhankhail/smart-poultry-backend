@@ -1,35 +1,36 @@
-﻿using Abp.Auditing;
-using SmartPoultry.Sessions.Dto;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Abp.Auditing;
+using SmartPoultry.Sessions.Dto;
 
-namespace SmartPoultry.Sessions;
-
-public class SessionAppService : SmartPoultryAppServiceBase, ISessionAppService
+namespace SmartPoultry.Sessions
 {
-    [DisableAuditing]
-    public async Task<GetCurrentLoginInformationsOutput> GetCurrentLoginInformations()
+    public class SessionAppService : SmartPoultryAppServiceBase, ISessionAppService
     {
-        var output = new GetCurrentLoginInformationsOutput
+        [DisableAuditing]
+        public async Task<GetCurrentLoginInformationsOutput> GetCurrentLoginInformations()
         {
-            Application = new ApplicationInfoDto
+            var output = new GetCurrentLoginInformationsOutput
             {
-                Version = AppVersionHelper.Version,
-                ReleaseDate = AppVersionHelper.ReleaseDate,
-                Features = new Dictionary<string, bool>()
+                Application = new ApplicationInfoDto
+                {
+                    Version = AppVersionHelper.Version,
+                    ReleaseDate = AppVersionHelper.ReleaseDate,
+                    Features = new Dictionary<string, bool>()
+                }
+            };
+
+            if (AbpSession.TenantId.HasValue)
+            {
+                output.Tenant = ObjectMapper.Map<TenantLoginInfoDto>(await GetCurrentTenantAsync());
             }
-        };
 
-        if (AbpSession.TenantId.HasValue)
-        {
-            output.Tenant = ObjectMapper.Map<TenantLoginInfoDto>(await GetCurrentTenantAsync());
+            if (AbpSession.UserId.HasValue)
+            {
+                output.User = ObjectMapper.Map<UserLoginInfoDto>(await GetCurrentUserAsync());
+            }
+
+            return output;
         }
-
-        if (AbpSession.UserId.HasValue)
-        {
-            output.User = ObjectMapper.Map<UserLoginInfoDto>(await GetCurrentUserAsync());
-        }
-
-        return output;
     }
 }

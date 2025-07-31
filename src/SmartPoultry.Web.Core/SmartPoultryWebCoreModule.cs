@@ -1,4 +1,9 @@
-﻿using Abp.AspNetCore;
+﻿using System;
+using System.Text;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using Abp.AspNetCore;
 using Abp.AspNetCore.Configuration;
 using Abp.AspNetCore.SignalR;
 using Abp.Modules;
@@ -7,12 +12,7 @@ using Abp.Zero.Configuration;
 using SmartPoultry.Authentication.JwtBearer;
 using SmartPoultry.Configuration;
 using SmartPoultry.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Text;
 
 namespace SmartPoultry
 {
@@ -20,7 +20,7 @@ namespace SmartPoultry
          typeof(SmartPoultryApplicationModule),
          typeof(SmartPoultryEntityFrameworkModule),
          typeof(AbpAspNetCoreModule)
-        , typeof(AbpAspNetCoreSignalRModule)
+        ,typeof(AbpAspNetCoreSignalRModule)
      )]
     public class SmartPoultryWebCoreModule : AbpModule
     {

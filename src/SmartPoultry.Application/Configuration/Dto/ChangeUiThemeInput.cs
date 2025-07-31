@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SmartPoultry.Configuration.Dto;
-
-public class ChangeUiThemeInput
+namespace SmartPoultry.Configuration.Dto
 {
-    [Required]
-    [StringLength(32)]
-    public string Theme { get; set; }
+    public class ChangeUiThemeInput
+    {
+        [Required]
+        [StringLength(32)]
+        public string Theme { get; set; }
+    }
 }

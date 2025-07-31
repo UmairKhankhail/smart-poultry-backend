@@ -1,21 +1,10 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.Runtime.Validation;
 
-namespace SmartPoultry.Roles.Dto;
-
-public class PagedRoleResultRequestDto : PagedResultRequestDto, IShouldNormalize
+namespace SmartPoultry.Roles.Dto
 {
-    public string Keyword { get; set; }
-    public string Sorting { get; set; }
-
-    public void Normalize()
+    public class PagedRoleResultRequestDto : PagedResultRequestDto
     {
-        if (string.IsNullOrEmpty(Sorting))
-        {
-            Sorting = "Name,DisplayName";
-        }
-
-        Keyword = Keyword?.Trim();
+        public string Keyword { get; set; }
     }
 }
 

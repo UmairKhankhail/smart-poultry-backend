@@ -1,22 +1,25 @@
-﻿using Abp.AspNetCore;
-using Abp.AspNetCore.Mvc.Antiforgery;
-using Abp.AspNetCore.SignalR.Hubs;
-using Abp.Castle.Logging.Log4Net;
-using Abp.Extensions;
-using SmartPoultry.Configuration;
-using SmartPoultry.Identity;
-using Castle.Facilities.Logging;
+﻿using System;
+using System.Linq;
+using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Castle.Facilities.Logging;
+using Abp.AspNetCore;
+using Abp.AspNetCore.Mvc.Antiforgery;
+using Abp.Castle.Logging.Log4Net;
+using Abp.Extensions;
+using SmartPoultry.Configuration;
+using SmartPoultry.Identity;
+using Abp.AspNetCore.SignalR.Hubs;
+using Abp.Dependency;
+using Abp.Json;
+using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System;
+using Newtonsoft.Json.Serialization;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 
 namespace SmartPoultry.Web.Host.Startup
 {
@@ -38,9 +41,14 @@ namespace SmartPoultry.Web.Host.Startup
         public void ConfigureServices(IServiceCollection services)
         {
             //MVC
-            services.AddControllersWithViews(options =>
+            services.AddControllersWithViews(
+                options => { options.Filters.Add(new AbpAutoValidateAntiforgeryTokenAttribute()); }
+            ).AddNewtonsoftJson(options =>
             {
-                options.Filters.Add(new AbpAutoValidateAntiforgeryTokenAttribute());
+                options.SerializerSettings.ContractResolver = new AbpMvcContractResolver(IocManager.Instance)
+                {
+                    NamingStrategy = new CamelCaseNamingStrategy()
+                };
             });
 
             IdentityRegistrar.Register(services);
@@ -92,9 +100,9 @@ namespace SmartPoultry.Web.Host.Startup
             app.UseRouting();
 
             app.UseAuthentication();
-            app.UseAuthorization();
 
             app.UseAbpRequestLocalization();
+
 
             app.UseEndpoints(endpoints =>
             {
@@ -113,10 +121,10 @@ namespace SmartPoultry.Web.Host.Startup
                 options.SwaggerEndpoint($"/swagger/{_apiVersion}/swagger.json", $"SmartPoultry API {_apiVersion}");
                 options.IndexStream = () => Assembly.GetExecutingAssembly()
                     .GetManifestResourceStream("SmartPoultry.Web.Host.wwwroot.swagger.ui.index.html");
-                options.DisplayRequestDuration(); // Controls the display of the request duration (in milliseconds) for "Try it out" requests.
+                options.DisplayRequestDuration(); // Controls the display of the request duration (in milliseconds) for "Try it out" requests.  
             }); // URL: /swagger
         }
-
+        
         private void ConfigureSwagger(IServiceCollection services)
         {
             services.AddSwaggerGen(options =>
@@ -136,7 +144,7 @@ namespace SmartPoultry.Web.Host.Startup
                     License = new OpenApiLicense
                     {
                         Name = "MIT License",
-                        Url = new Uri("https://github.com/aspnetboilerplate/aspnetboilerplate/blob/dev/LICENSE.md"),
+                        Url = new Uri("https://github.com/aspnetboilerplate/aspnetboilerplate/blob/dev/LICENSE"),
                     }
                 });
                 options.DocInclusionPredicate((docName, description) => true);

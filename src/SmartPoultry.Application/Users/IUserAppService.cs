@@ -1,17 +1,18 @@
+using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using SmartPoultry.Roles.Dto;
 using SmartPoultry.Users.Dto;
-using System.Threading.Tasks;
 
-namespace SmartPoultry.Users;
-
-public interface IUserAppService : IAsyncCrudAppService<UserDto, long, PagedUserResultRequestDto, CreateUserDto, UserDto>
+namespace SmartPoultry.Users
 {
-    Task DeActivate(EntityDto<long> user);
-    Task Activate(EntityDto<long> user);
-    Task<ListResultDto<RoleDto>> GetRoles();
-    Task ChangeLanguage(ChangeUserLanguageDto input);
+    public interface IUserAppService : IAsyncCrudAppService<UserDto, long, PagedUserResultRequestDto, CreateUserDto, UserDto>
+    {
+        Task DeActivate(EntityDto<long> user);
+        Task Activate(EntityDto<long> user);
+        Task<ListResultDto<RoleDto>> GetRoles();
+        Task ChangeLanguage(ChangeUserLanguageDto input);
 
-    Task<bool> ChangePassword(ChangePasswordDto input);
+        Task<bool> ChangePassword(ChangePasswordDto input);
+    }
 }

@@ -1,14 +1,15 @@
-namespace SmartPoultry.Authorization.Roles;
-
-public static class StaticRoleNames
+namespace SmartPoultry.Authorization.Roles
 {
-    public static class Host
+    public static class StaticRoleNames
     {
-        public const string Admin = "Admin";
-    }
+        public static class Host
+        {
+            public const string Admin = "Admin";
+        }
 
-    public static class Tenants
-    {
-        public const string Admin = "Admin";
+        public static class Tenants
+        {
+            public const string Admin = "Admin";
+        }
     }
 }

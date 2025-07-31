@@ -1,22 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SmartPoultry.Migrations;
-
-public partial class Remove_IsActive_From_Role : Migration
+namespace SmartPoultry.Migrations
 {
-    protected override void Up(MigrationBuilder migrationBuilder)
+    public partial class Remove_IsActive_From_Role : Migration
     {
-        migrationBuilder.DropColumn(
-            name: "IsActive",
-            table: "AbpRoles");
-    }
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "IsActive",
+                table: "AbpRoles");
+        }
 
-    protected override void Down(MigrationBuilder migrationBuilder)
-    {
-        migrationBuilder.AddColumn<bool>(
-            name: "IsActive",
-            table: "AbpRoles",
-            nullable: false,
-            defaultValue: false);
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<bool>(
+                name: "IsActive",
+                table: "AbpRoles",
+                nullable: false,
+                defaultValue: false);
+        }
     }
 }

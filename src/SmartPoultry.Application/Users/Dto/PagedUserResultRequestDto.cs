@@ -1,23 +1,12 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.Runtime.Validation;
+using System;
 
-namespace SmartPoultry.Users.Dto;
-
-//custom PagedResultRequestDto
-public class PagedUserResultRequestDto : PagedResultRequestDto, IShouldNormalize
+namespace SmartPoultry.Users.Dto
 {
-    public string Keyword { get; set; }
-    public bool? IsActive { get; set; }
-
-    public string Sorting { get; set; }
-
-    public void Normalize()
+    //custom PagedResultRequestDto
+    public class PagedUserResultRequestDto : PagedResultRequestDto
     {
-        if (string.IsNullOrEmpty(Sorting))
-        {
-            Sorting = "UserName,EmailAddress";
-        }
-
-        Keyword = Keyword?.Trim();
+        public string Keyword { get; set; }
+        public bool? IsActive { get; set; }
     }
 }

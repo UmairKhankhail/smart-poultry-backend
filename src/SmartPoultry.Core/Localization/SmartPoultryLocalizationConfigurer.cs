@@ -3,19 +3,20 @@ using Abp.Localization.Dictionaries;
 using Abp.Localization.Dictionaries.Xml;
 using Abp.Reflection.Extensions;
 
-namespace SmartPoultry.Localization;
-
-public static class SmartPoultryLocalizationConfigurer
+namespace SmartPoultry.Localization
 {
-    public static void Configure(ILocalizationConfiguration localizationConfiguration)
+    public static class SmartPoultryLocalizationConfigurer
     {
-        localizationConfiguration.Sources.Add(
-            new DictionaryBasedLocalizationSource(SmartPoultryConsts.LocalizationSourceName,
-                new XmlEmbeddedFileLocalizationDictionaryProvider(
-                    typeof(SmartPoultryLocalizationConfigurer).GetAssembly(),
-                    "SmartPoultry.Localization.SourceFiles"
+        public static void Configure(ILocalizationConfiguration localizationConfiguration)
+        {
+            localizationConfiguration.Sources.Add(
+                new DictionaryBasedLocalizationSource(SmartPoultryConsts.LocalizationSourceName,
+                    new XmlEmbeddedFileLocalizationDictionaryProvider(
+                        typeof(SmartPoultryLocalizationConfigurer).GetAssembly(),
+                        "SmartPoultry.Localization.SourceFiles"
+                    )
                 )
-            )
-        );
+            );
+        }
     }
 }

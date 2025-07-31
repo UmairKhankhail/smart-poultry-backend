@@ -1,20 +1,21 @@
-﻿using Abp.Extensions;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
+using Abp.Extensions;
 
-namespace SmartPoultry.Validation;
-
-public static class ValidationHelper
+namespace SmartPoultry.Validation
 {
-    public const string EmailRegex = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
-
-    public static bool IsEmail(string value)
+    public static class ValidationHelper
     {
-        if (value.IsNullOrEmpty())
-        {
-            return false;
-        }
+        public const string EmailRegex = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
 
-        var regex = new Regex(EmailRegex);
-        return regex.IsMatch(value);
+        public static bool IsEmail(string value)
+        {
+            if (value.IsNullOrEmpty())
+            {
+                return false;
+            }
+
+            var regex = new Regex(EmailRegex);
+            return regex.IsMatch(value);
+        }
     }
 }

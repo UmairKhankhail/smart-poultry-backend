@@ -1,17 +1,18 @@
-﻿namespace SmartPoultry.Debugging;
-
-public static class DebugHelper
+﻿namespace SmartPoultry.Debugging
 {
-    public static bool IsDebug
+    public static class DebugHelper
     {
-        get
+        public static bool IsDebug
         {
+            get
+            {
 #pragma warning disable
 #if DEBUG
-            return true;
+                return true;
 #endif
-            return false;
+                return false;
 #pragma warning restore
+            }
         }
     }
 }

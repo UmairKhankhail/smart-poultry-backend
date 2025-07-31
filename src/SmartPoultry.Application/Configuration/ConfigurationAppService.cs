@@ -1,15 +1,16 @@
-﻿using Abp.Authorization;
+﻿using System.Threading.Tasks;
+using Abp.Authorization;
 using Abp.Runtime.Session;
 using SmartPoultry.Configuration.Dto;
-using System.Threading.Tasks;
 
-namespace SmartPoultry.Configuration;
-
-[AbpAuthorize]
-public class ConfigurationAppService : SmartPoultryAppServiceBase, IConfigurationAppService
+namespace SmartPoultry.Configuration
 {
-    public async Task ChangeUiTheme(ChangeUiThemeInput input)
+    [AbpAuthorize]
+    public class ConfigurationAppService : SmartPoultryAppServiceBase, IConfigurationAppService
     {
-        await SettingManager.ChangeSettingForUserAsync(AbpSession.ToUserIdentifier(), AppSettingNames.UiTheme, input.Theme);
+        public async Task ChangeUiTheme(ChangeUiThemeInput input)
+        {
+            await SettingManager.ChangeSettingForUserAsync(AbpSession.ToUserIdentifier(), AppSettingNames.UiTheme, input.Theme);
+        }
     }
 }

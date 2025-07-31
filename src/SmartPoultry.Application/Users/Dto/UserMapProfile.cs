@@ -1,18 +1,19 @@
-﻿using SmartPoultry.Authorization.Users;
-using AutoMapper;
+﻿using AutoMapper;
+using SmartPoultry.Authorization.Users;
 
-namespace SmartPoultry.Users.Dto;
-
-public class UserMapProfile : Profile
+namespace SmartPoultry.Users.Dto
 {
-    public UserMapProfile()
+    public class UserMapProfile : Profile
     {
-        CreateMap<UserDto, User>();
-        CreateMap<UserDto, User>()
-            .ForMember(x => x.Roles, opt => opt.Ignore())
-            .ForMember(x => x.CreationTime, opt => opt.Ignore());
+        public UserMapProfile()
+        {
+            CreateMap<UserDto, User>();
+            CreateMap<UserDto, User>()
+                .ForMember(x => x.Roles, opt => opt.Ignore())
+                .ForMember(x => x.CreationTime, opt => opt.Ignore());
 
-        CreateMap<CreateUserDto, User>();
-        CreateMap<CreateUserDto, User>().ForMember(x => x.Roles, opt => opt.Ignore());
+            CreateMap<CreateUserDto, User>();
+            CreateMap<CreateUserDto, User>().ForMember(x => x.Roles, opt => opt.Ignore());
+        }
     }
 }

@@ -1,6 +1,7 @@
-﻿namespace SmartPoultry.Authorization.Accounts.Dto;
-
-public class RegisterOutput
+﻿namespace SmartPoultry.Authorization.Accounts.Dto
 {
-    public bool CanLogin { get; set; }
+    public class RegisterOutput
+    {
+        public bool CanLogin { get; set; }
+    }
 }

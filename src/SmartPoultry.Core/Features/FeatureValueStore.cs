@@ -6,24 +6,25 @@ using Abp.Runtime.Caching;
 using SmartPoultry.Authorization.Users;
 using SmartPoultry.MultiTenancy;
 
-namespace SmartPoultry.Features;
-
-public class FeatureValueStore : AbpFeatureValueStore<Tenant, User>
+namespace SmartPoultry.Features
 {
-    public FeatureValueStore(
-        ICacheManager cacheManager,
-        IRepository<TenantFeatureSetting, long> tenantFeatureRepository,
-        IRepository<Tenant> tenantRepository,
-        IRepository<EditionFeatureSetting, long> editionFeatureRepository,
-        IFeatureManager featureManager,
-        IUnitOfWorkManager unitOfWorkManager)
-        : base(
-              cacheManager,
-              tenantFeatureRepository,
-              tenantRepository,
-              editionFeatureRepository,
-              featureManager,
-              unitOfWorkManager)
+    public class FeatureValueStore : AbpFeatureValueStore<Tenant, User>
     {
+        public FeatureValueStore(
+            ICacheManager cacheManager, 
+            IRepository<TenantFeatureSetting, long> tenantFeatureRepository, 
+            IRepository<Tenant> tenantRepository, 
+            IRepository<EditionFeatureSetting, long> editionFeatureRepository, 
+            IFeatureManager featureManager, 
+            IUnitOfWorkManager unitOfWorkManager) 
+            : base(
+                  cacheManager, 
+                  tenantFeatureRepository, 
+                  tenantRepository, 
+                  editionFeatureRepository, 
+                  featureManager, 
+                  unitOfWorkManager)
+        {
+        }
     }
 }

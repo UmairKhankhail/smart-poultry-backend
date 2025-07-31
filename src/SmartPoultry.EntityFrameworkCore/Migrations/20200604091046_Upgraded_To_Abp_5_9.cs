@@ -1,32 +1,33 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SmartPoultry.Migrations;
-
-public partial class Upgraded_To_Abp_5_9 : Migration
+namespace SmartPoultry.Migrations
 {
-    protected override void Up(MigrationBuilder migrationBuilder)
+    public partial class Upgraded_To_Abp_5_9 : Migration
     {
-        migrationBuilder.DropIndex(
-            name: "IX_AbpOrganizationUnits_TenantId_Code",
-            table: "AbpOrganizationUnits");
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropIndex(
+                name: "IX_AbpOrganizationUnits_TenantId_Code",
+                table: "AbpOrganizationUnits");
 
-        migrationBuilder.CreateIndex(
-            name: "IX_AbpOrganizationUnits_TenantId_Code",
-            table: "AbpOrganizationUnits",
-            columns: new[] { "TenantId", "Code" });
-    }
+            migrationBuilder.CreateIndex(
+                name: "IX_AbpOrganizationUnits_TenantId_Code",
+                table: "AbpOrganizationUnits",
+                columns: new[] { "TenantId", "Code" });
+        }
 
-    protected override void Down(MigrationBuilder migrationBuilder)
-    {
-        migrationBuilder.DropIndex(
-            name: "IX_AbpOrganizationUnits_TenantId_Code",
-            table: "AbpOrganizationUnits");
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropIndex(
+                name: "IX_AbpOrganizationUnits_TenantId_Code",
+                table: "AbpOrganizationUnits");
 
-        migrationBuilder.CreateIndex(
-            name: "IX_AbpOrganizationUnits_TenantId_Code",
-            table: "AbpOrganizationUnits",
-            columns: new[] { "TenantId", "Code" },
-            unique: true,
-            filter: "[TenantId] IS NOT NULL");
+            migrationBuilder.CreateIndex(
+                name: "IX_AbpOrganizationUnits_TenantId_Code",
+                table: "AbpOrganizationUnits",
+                columns: new[] { "TenantId", "Code" },
+                unique: true,
+                filter: "[TenantId] IS NOT NULL");
+        }
     }
 }

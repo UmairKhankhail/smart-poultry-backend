@@ -1,5 +1,5 @@
-﻿using Abp.Dependency;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Abp.Dependency;
 
 namespace SmartPoultry.Authentication.External
 {

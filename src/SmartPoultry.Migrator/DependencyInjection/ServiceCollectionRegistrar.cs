@@ -1,18 +1,19 @@
-﻿using Abp.Dependency;
-using SmartPoultry.Identity;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Castle.Windsor.MsDependencyInjection;
-using Microsoft.Extensions.DependencyInjection;
+using Abp.Dependency;
+using SmartPoultry.Identity;
 
-namespace SmartPoultry.Migrator.DependencyInjection;
-
-public static class ServiceCollectionRegistrar
+namespace SmartPoultry.Migrator.DependencyInjection
 {
-    public static void Register(IIocManager iocManager)
+    public static class ServiceCollectionRegistrar
     {
-        var services = new ServiceCollection();
+        public static void Register(IIocManager iocManager)
+        {
+            var services = new ServiceCollection();
 
-        IdentityRegistrar.Register(services);
+            IdentityRegistrar.Register(services);
 
-        WindsorRegistrationHelper.CreateServiceProvider(iocManager.IocContainer, services);
+            WindsorRegistrationHelper.CreateServiceProvider(iocManager.IocContainer, services);
+        }
     }
 }

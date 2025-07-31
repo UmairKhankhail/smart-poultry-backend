@@ -1,10 +1,11 @@
-﻿namespace SmartPoultry.Roles.Dto;
-
-public class FlatPermissionDto
+﻿namespace SmartPoultry.Roles.Dto
 {
-    public string Name { get; set; }
-
-    public string DisplayName { get; set; }
-
-    public string Description { get; set; }
+    public class FlatPermissionDto
+    {
+        public string Name { get; set; }
+        
+        public string DisplayName { get; set; }
+        
+        public string Description { get; set; }
+    }
 }

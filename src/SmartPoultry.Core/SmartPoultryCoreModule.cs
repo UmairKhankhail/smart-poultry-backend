@@ -12,43 +12,44 @@ using SmartPoultry.Localization;
 using SmartPoultry.MultiTenancy;
 using SmartPoultry.Timing;
 
-namespace SmartPoultry;
-
-[DependsOn(typeof(AbpZeroCoreModule))]
-public class SmartPoultryCoreModule : AbpModule
+namespace SmartPoultry
 {
-    public override void PreInitialize()
+    [DependsOn(typeof(AbpZeroCoreModule))]
+    public class SmartPoultryCoreModule : AbpModule
     {
-        Configuration.Auditing.IsEnabledForAnonymousUsers = true;
+        public override void PreInitialize()
+        {
+            Configuration.Auditing.IsEnabledForAnonymousUsers = true;
 
-        // Declare entity types
-        Configuration.Modules.Zero().EntityTypes.Tenant = typeof(Tenant);
-        Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
-        Configuration.Modules.Zero().EntityTypes.User = typeof(User);
+            // Declare entity types
+            Configuration.Modules.Zero().EntityTypes.Tenant = typeof(Tenant);
+            Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
+            Configuration.Modules.Zero().EntityTypes.User = typeof(User);
 
-        SmartPoultryLocalizationConfigurer.Configure(Configuration.Localization);
+            SmartPoultryLocalizationConfigurer.Configure(Configuration.Localization);
 
-        // Enable this line to create a multi-tenant application.
-        Configuration.MultiTenancy.IsEnabled = SmartPoultryConsts.MultiTenancyEnabled;
+            // Enable this line to create a multi-tenant application.
+            Configuration.MultiTenancy.IsEnabled = SmartPoultryConsts.MultiTenancyEnabled;
 
-        // Configure roles
-        AppRoleConfig.Configure(Configuration.Modules.Zero().RoleManagement);
+            // Configure roles
+            AppRoleConfig.Configure(Configuration.Modules.Zero().RoleManagement);
 
-        Configuration.Settings.Providers.Add<AppSettingProvider>();
+            Configuration.Settings.Providers.Add<AppSettingProvider>();
+            
+            Configuration.Localization.Languages.Add(new LanguageInfo("fa", "فارسی", "famfamfam-flags ir"));
+            
+            Configuration.Settings.SettingEncryptionConfiguration.DefaultPassPhrase = SmartPoultryConsts.DefaultPassPhrase;
+            SimpleStringCipher.DefaultPassPhrase = SmartPoultryConsts.DefaultPassPhrase;
+        }
 
-        Configuration.Localization.Languages.Add(new LanguageInfo("fa", "فارسی", "famfamfam-flags ir"));
+        public override void Initialize()
+        {
+            IocManager.RegisterAssemblyByConvention(typeof(SmartPoultryCoreModule).GetAssembly());
+        }
 
-        Configuration.Settings.SettingEncryptionConfiguration.DefaultPassPhrase = SmartPoultryConsts.DefaultPassPhrase;
-        SimpleStringCipher.DefaultPassPhrase = SmartPoultryConsts.DefaultPassPhrase;
-    }
-
-    public override void Initialize()
-    {
-        IocManager.RegisterAssemblyByConvention(typeof(SmartPoultryCoreModule).GetAssembly());
-    }
-
-    public override void PostInitialize()
-    {
-        IocManager.Resolve<AppTimes>().StartupTime = Clock.Now;
+        public override void PostInitialize()
+        {
+            IocManager.Resolve<AppTimes>().StartupTime = Clock.Now;
+        }
     }
 }

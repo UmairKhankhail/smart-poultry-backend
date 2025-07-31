@@ -1,10 +1,11 @@
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Abp;
 using Abp.Extensions;
 using Abp.Notifications;
 using Abp.Timing;
+using Abp.Web.Security.AntiForgery;
 using SmartPoultry.Controllers;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace SmartPoultry.Web.Host.Controllers
 {

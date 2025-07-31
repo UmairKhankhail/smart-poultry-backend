@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SmartPoultry.Users.Dto;
-
-public class ChangePasswordDto
+namespace SmartPoultry.Users.Dto
 {
-    [Required]
-    public string CurrentPassword { get; set; }
+    public class ChangePasswordDto
+    {
+        [Required]
+        public string CurrentPassword { get; set; }
 
-    [Required]
-    public string NewPassword { get; set; }
+        [Required]
+        public string NewPassword { get; set; }
+    }
 }

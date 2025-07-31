@@ -4,20 +4,21 @@ using Abp.MultiTenancy;
 using SmartPoultry.Authorization.Users;
 using SmartPoultry.Editions;
 
-namespace SmartPoultry.MultiTenancy;
-
-public class TenantManager : AbpTenantManager<Tenant, User>
+namespace SmartPoultry.MultiTenancy
 {
-    public TenantManager(
-        IRepository<Tenant> tenantRepository,
-        IRepository<TenantFeatureSetting, long> tenantFeatureRepository,
-        EditionManager editionManager,
-        IAbpZeroFeatureValueStore featureValueStore)
-        : base(
-            tenantRepository,
-            tenantFeatureRepository,
-            editionManager,
-            featureValueStore)
+    public class TenantManager : AbpTenantManager<Tenant, User>
     {
+        public TenantManager(
+            IRepository<Tenant> tenantRepository, 
+            IRepository<TenantFeatureSetting, long> tenantFeatureRepository, 
+            EditionManager editionManager,
+            IAbpZeroFeatureValueStore featureValueStore) 
+            : base(
+                tenantRepository, 
+                tenantFeatureRepository, 
+                editionManager,
+                featureValueStore)
+        {
+        }
     }
 }

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SmartPoultry.Sessions.Dto;
-
-public class ApplicationInfoDto
+namespace SmartPoultry.Sessions.Dto
 {
-    public string Version { get; set; }
+    public class ApplicationInfoDto
+    {
+        public string Version { get; set; }
 
-    public DateTime ReleaseDate { get; set; }
+        public DateTime ReleaseDate { get; set; }
 
-    public Dictionary<string, bool> Features { get; set; }
+        public Dictionary<string, bool> Features { get; set; }
+    }
 }

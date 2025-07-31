@@ -1,8 +1,9 @@
-﻿namespace SmartPoultry.Authorization.Accounts.Dto;
-
-public enum TenantAvailabilityState
+﻿namespace SmartPoultry.Authorization.Accounts.Dto
 {
-    Available = 1,
-    InActive,
-    NotFound
+    public enum TenantAvailabilityState
+    {
+        Available = 1,
+        InActive,
+        NotFound
+    }
 }

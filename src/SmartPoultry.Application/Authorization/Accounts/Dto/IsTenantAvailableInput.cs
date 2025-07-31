@@ -1,11 +1,12 @@
-﻿using Abp.MultiTenancy;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Abp.MultiTenancy;
 
-namespace SmartPoultry.Authorization.Accounts.Dto;
-
-public class IsTenantAvailableInput
+namespace SmartPoultry.Authorization.Accounts.Dto
 {
-    [Required]
-    [StringLength(AbpTenantBase.MaxTenancyNameLength)]
-    public string TenancyName { get; set; }
+    public class IsTenantAvailableInput
+    {
+        [Required]
+        [StringLength(AbpTenantBase.MaxTenancyNameLength)]
+        public string TenancyName { get; set; }
+    }
 }

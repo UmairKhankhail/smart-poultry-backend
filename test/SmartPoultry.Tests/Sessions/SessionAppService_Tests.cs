@@ -1,51 +1,52 @@
-﻿using SmartPoultry.Sessions;
+﻿using System.Threading.Tasks;
 using Shouldly;
-using System.Threading.Tasks;
 using Xunit;
+using SmartPoultry.Sessions;
 
-namespace SmartPoultry.Tests.Sessions;
-
-public class SessionAppService_Tests : SmartPoultryTestBase
+namespace SmartPoultry.Tests.Sessions
 {
-    private readonly ISessionAppService _sessionAppService;
-
-    public SessionAppService_Tests()
+    public class SessionAppService_Tests : SmartPoultryTestBase
     {
-        _sessionAppService = Resolve<ISessionAppService>();
-    }
+        private readonly ISessionAppService _sessionAppService;
 
-    [MultiTenantFact]
-    public async Task Should_Get_Current_User_When_Logged_In_As_Host()
-    {
-        // Arrange
-        LoginAsHostAdmin();
+        public SessionAppService_Tests()
+        {
+            _sessionAppService = Resolve<ISessionAppService>();
+        }
 
-        // Act
-        var output = await _sessionAppService.GetCurrentLoginInformations();
+        [MultiTenantFact]
+        public async Task Should_Get_Current_User_When_Logged_In_As_Host()
+        {
+            // Arrange
+            LoginAsHostAdmin();
 
-        // Assert
-        var currentUser = await GetCurrentUserAsync();
-        output.User.ShouldNotBe(null);
-        output.User.Name.ShouldBe(currentUser.Name);
-        output.User.Surname.ShouldBe(currentUser.Surname);
+            // Act
+            var output = await _sessionAppService.GetCurrentLoginInformations();
 
-        output.Tenant.ShouldBe(null);
-    }
+            // Assert
+            var currentUser = await GetCurrentUserAsync();
+            output.User.ShouldNotBe(null);
+            output.User.Name.ShouldBe(currentUser.Name);
+            output.User.Surname.ShouldBe(currentUser.Surname);
 
-    [Fact]
-    public async Task Should_Get_Current_User_And_Tenant_When_Logged_In_As_Tenant()
-    {
-        // Act
-        var output = await _sessionAppService.GetCurrentLoginInformations();
+            output.Tenant.ShouldBe(null);
+        }
 
-        // Assert
-        var currentUser = await GetCurrentUserAsync();
-        var currentTenant = await GetCurrentTenantAsync();
+        [Fact]
+        public async Task Should_Get_Current_User_And_Tenant_When_Logged_In_As_Tenant()
+        {
+            // Act
+            var output = await _sessionAppService.GetCurrentLoginInformations();
 
-        output.User.ShouldNotBe(null);
-        output.User.Name.ShouldBe(currentUser.Name);
+            // Assert
+            var currentUser = await GetCurrentUserAsync();
+            var currentTenant = await GetCurrentTenantAsync();
 
-        output.Tenant.ShouldNotBe(null);
-        output.Tenant.Name.ShouldBe(currentTenant.Name);
+            output.User.ShouldNotBe(null);
+            output.User.Name.ShouldBe(currentUser.Name);
+
+            output.Tenant.ShouldNotBe(null);
+            output.Tenant.Name.ShouldBe(currentTenant.Name);
+        }
     }
 }

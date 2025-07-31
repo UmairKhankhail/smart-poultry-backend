@@ -1,14 +1,14 @@
-﻿using Abp.Modules;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Abp.Modules;
 using Abp.Reflection.Extensions;
 using SmartPoultry.Configuration;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 
 namespace SmartPoultry.Web.Host.Startup
 {
     [DependsOn(
        typeof(SmartPoultryWebCoreModule))]
-    public class SmartPoultryWebHostModule : AbpModule
+    public class SmartPoultryWebHostModule: AbpModule
     {
         private readonly IWebHostEnvironment _env;
         private readonly IConfigurationRoot _appConfiguration;

@@ -1,46 +1,47 @@
-﻿using Abp.Application.Services;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Abp.Application.Services;
 using Abp.IdentityFramework;
 using Abp.Runtime.Session;
 using SmartPoultry.Authorization.Users;
 using SmartPoultry.MultiTenancy;
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Threading.Tasks;
 
-namespace SmartPoultry;
-
-/// <summary>
-/// Derive your application services from this class.
-/// </summary>
-public abstract class SmartPoultryAppServiceBase : ApplicationService
+namespace SmartPoultry
 {
-    public TenantManager TenantManager { get; set; }
-
-    public UserManager UserManager { get; set; }
-
-    protected SmartPoultryAppServiceBase()
+    /// <summary>
+    /// Derive your application services from this class.
+    /// </summary>
+    public abstract class SmartPoultryAppServiceBase : ApplicationService
     {
-        LocalizationSourceName = SmartPoultryConsts.LocalizationSourceName;
-    }
+        public TenantManager TenantManager { get; set; }
 
-    protected virtual async Task<User> GetCurrentUserAsync()
-    {
-        var user = await UserManager.FindByIdAsync(AbpSession.GetUserId().ToString());
-        if (user == null)
+        public UserManager UserManager { get; set; }
+
+        protected SmartPoultryAppServiceBase()
         {
-            throw new Exception("There is no current user!");
+            LocalizationSourceName = SmartPoultryConsts.LocalizationSourceName;
         }
 
-        return user;
-    }
+        protected virtual async Task<User> GetCurrentUserAsync()
+        {
+            var user = await UserManager.FindByIdAsync(AbpSession.GetUserId().ToString());
+            if (user == null)
+            {
+                throw new Exception("There is no current user!");
+            }
 
-    protected virtual Task<Tenant> GetCurrentTenantAsync()
-    {
-        return TenantManager.GetByIdAsync(AbpSession.GetTenantId());
-    }
+            return user;
+        }
 
-    protected virtual void CheckErrors(IdentityResult identityResult)
-    {
-        identityResult.CheckErrors(LocalizationManager);
+        protected virtual Task<Tenant> GetCurrentTenantAsync()
+        {
+            return TenantManager.GetByIdAsync(AbpSession.GetTenantId());
+        }
+
+        protected virtual void CheckErrors(IdentityResult identityResult)
+        {
+            identityResult.CheckErrors(LocalizationManager);
+        }
     }
 }

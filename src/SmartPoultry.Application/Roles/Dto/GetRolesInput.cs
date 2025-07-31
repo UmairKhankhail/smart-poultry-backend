@@ -1,6 +1,7 @@
-﻿namespace SmartPoultry.Roles.Dto;
-
-public class GetRolesInput
+﻿namespace SmartPoultry.Roles.Dto
 {
-    public string Permission { get; set; }
+    public class GetRolesInput
+    {
+        public string Permission { get; set; }
+    }
 }

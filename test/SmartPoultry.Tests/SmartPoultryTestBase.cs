@@ -1,4 +1,8 @@
-﻿using Abp;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Abp;
 using Abp.Authorization.Users;
 using Abp.Events.Bus;
 using Abp.Events.Bus.Entities;
@@ -10,200 +14,197 @@ using SmartPoultry.EntityFrameworkCore;
 using SmartPoultry.EntityFrameworkCore.Seed.Host;
 using SmartPoultry.EntityFrameworkCore.Seed.Tenants;
 using SmartPoultry.MultiTenancy;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace SmartPoultry.Tests;
-
-public abstract class SmartPoultryTestBase : AbpIntegratedTestBase<SmartPoultryTestModule>
+namespace SmartPoultry.Tests
 {
-    protected SmartPoultryTestBase()
+    public abstract class SmartPoultryTestBase : AbpIntegratedTestBase<SmartPoultryTestModule>
     {
-        void NormalizeDbContext(SmartPoultryDbContext context)
+        protected SmartPoultryTestBase()
         {
-            context.EntityChangeEventHelper = NullEntityChangeEventHelper.Instance;
-            context.EventBus = NullEventBus.Instance;
-            context.SuppressAutoSetTenantId = true;
-        }
-
-        // Seed initial data for host
-        AbpSession.TenantId = null;
-        UsingDbContext(context =>
-        {
-            NormalizeDbContext(context);
-            new InitialHostDbBuilder(context).Create();
-            new DefaultTenantBuilder(context).Create();
-        });
-
-        // Seed initial data for default tenant
-        AbpSession.TenantId = 1;
-        UsingDbContext(context =>
-        {
-            NormalizeDbContext(context);
-            new TenantRoleAndUserBuilder(context, 1).Create();
-        });
-
-        LoginAsDefaultTenantAdmin();
-    }
-
-    #region UsingDbContext
-
-    protected IDisposable UsingTenantId(int? tenantId)
-    {
-        var previousTenantId = AbpSession.TenantId;
-        AbpSession.TenantId = tenantId;
-        return new DisposeAction(() => AbpSession.TenantId = previousTenantId);
-    }
-
-    protected void UsingDbContext(Action<SmartPoultryDbContext> action)
-    {
-        UsingDbContext(AbpSession.TenantId, action);
-    }
-
-    protected Task UsingDbContextAsync(Func<SmartPoultryDbContext, Task> action)
-    {
-        return UsingDbContextAsync(AbpSession.TenantId, action);
-    }
-
-    protected T UsingDbContext<T>(Func<SmartPoultryDbContext, T> func)
-    {
-        return UsingDbContext(AbpSession.TenantId, func);
-    }
-
-    protected Task<T> UsingDbContextAsync<T>(Func<SmartPoultryDbContext, Task<T>> func)
-    {
-        return UsingDbContextAsync(AbpSession.TenantId, func);
-    }
-
-    protected void UsingDbContext(int? tenantId, Action<SmartPoultryDbContext> action)
-    {
-        using (UsingTenantId(tenantId))
-        {
-            using (var context = LocalIocManager.Resolve<SmartPoultryDbContext>())
+            void NormalizeDbContext(SmartPoultryDbContext context)
             {
-                action(context);
-                context.SaveChanges();
+                context.EntityChangeEventHelper = NullEntityChangeEventHelper.Instance;
+                context.EventBus = NullEventBus.Instance;
+                context.SuppressAutoSetTenantId = true;
             }
-        }
-    }
 
-    protected async Task UsingDbContextAsync(int? tenantId, Func<SmartPoultryDbContext, Task> action)
-    {
-        using (UsingTenantId(tenantId))
-        {
-            using (var context = LocalIocManager.Resolve<SmartPoultryDbContext>())
+            // Seed initial data for host
+            AbpSession.TenantId = null;
+            UsingDbContext(context =>
             {
-                await action(context);
-                await context.SaveChangesAsync();
-            }
-        }
-    }
+                NormalizeDbContext(context);
+                new InitialHostDbBuilder(context).Create();
+                new DefaultTenantBuilder(context).Create();
+            });
 
-    protected T UsingDbContext<T>(int? tenantId, Func<SmartPoultryDbContext, T> func)
-    {
-        T result;
-
-        using (UsingTenantId(tenantId))
-        {
-            using (var context = LocalIocManager.Resolve<SmartPoultryDbContext>())
+            // Seed initial data for default tenant
+            AbpSession.TenantId = 1;
+            UsingDbContext(context =>
             {
-                result = func(context);
-                context.SaveChanges();
+                NormalizeDbContext(context);
+                new TenantRoleAndUserBuilder(context, 1).Create();
+            });
+
+            LoginAsDefaultTenantAdmin();
+        }
+
+        #region UsingDbContext
+
+        protected IDisposable UsingTenantId(int? tenantId)
+        {
+            var previousTenantId = AbpSession.TenantId;
+            AbpSession.TenantId = tenantId;
+            return new DisposeAction(() => AbpSession.TenantId = previousTenantId);
+        }
+
+        protected void UsingDbContext(Action<SmartPoultryDbContext> action)
+        {
+            UsingDbContext(AbpSession.TenantId, action);
+        }
+
+        protected Task UsingDbContextAsync(Func<SmartPoultryDbContext, Task> action)
+        {
+            return UsingDbContextAsync(AbpSession.TenantId, action);
+        }
+
+        protected T UsingDbContext<T>(Func<SmartPoultryDbContext, T> func)
+        {
+            return UsingDbContext(AbpSession.TenantId, func);
+        }
+
+        protected Task<T> UsingDbContextAsync<T>(Func<SmartPoultryDbContext, Task<T>> func)
+        {
+            return UsingDbContextAsync(AbpSession.TenantId, func);
+        }
+
+        protected void UsingDbContext(int? tenantId, Action<SmartPoultryDbContext> action)
+        {
+            using (UsingTenantId(tenantId))
+            {
+                using (var context = LocalIocManager.Resolve<SmartPoultryDbContext>())
+                {
+                    action(context);
+                    context.SaveChanges();
+                }
             }
         }
 
-        return result;
-    }
-
-    protected async Task<T> UsingDbContextAsync<T>(int? tenantId, Func<SmartPoultryDbContext, Task<T>> func)
-    {
-        T result;
-
-        using (UsingTenantId(tenantId))
+        protected async Task UsingDbContextAsync(int? tenantId, Func<SmartPoultryDbContext, Task> action)
         {
-            using (var context = LocalIocManager.Resolve<SmartPoultryDbContext>())
+            using (UsingTenantId(tenantId))
             {
-                result = await func(context);
-                await context.SaveChangesAsync();
+                using (var context = LocalIocManager.Resolve<SmartPoultryDbContext>())
+                {
+                    await action(context);
+                    await context.SaveChangesAsync();
+                }
             }
         }
 
-        return result;
-    }
-
-    #endregion
-
-    #region Login
-
-    protected void LoginAsHostAdmin()
-    {
-        LoginAsHost(AbpUserBase.AdminUserName);
-    }
-
-    protected void LoginAsDefaultTenantAdmin()
-    {
-        LoginAsTenant(AbpTenantBase.DefaultTenantName, AbpUserBase.AdminUserName);
-    }
-
-    protected void LoginAsHost(string userName)
-    {
-        AbpSession.TenantId = null;
-
-        var user =
-            UsingDbContext(
-                context =>
-                    context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
-        if (user == null)
+        protected T UsingDbContext<T>(int? tenantId, Func<SmartPoultryDbContext, T> func)
         {
-            throw new Exception("There is no user: " + userName + " for host.");
+            T result;
+
+            using (UsingTenantId(tenantId))
+            {
+                using (var context = LocalIocManager.Resolve<SmartPoultryDbContext>())
+                {
+                    result = func(context);
+                    context.SaveChanges();
+                }
+            }
+
+            return result;
         }
 
-        AbpSession.UserId = user.Id;
-    }
-
-    protected void LoginAsTenant(string tenancyName, string userName)
-    {
-        var tenant = UsingDbContext(context => context.Tenants.FirstOrDefault(t => t.TenancyName == tenancyName));
-        if (tenant == null)
+        protected async Task<T> UsingDbContextAsync<T>(int? tenantId, Func<SmartPoultryDbContext, Task<T>> func)
         {
-            throw new Exception("There is no tenant: " + tenancyName);
+            T result;
+
+            using (UsingTenantId(tenantId))
+            {
+                using (var context = LocalIocManager.Resolve<SmartPoultryDbContext>())
+                {
+                    result = await func(context);
+                    await context.SaveChangesAsync();
+                }
+            }
+
+            return result;
         }
 
-        AbpSession.TenantId = tenant.Id;
+        #endregion
 
-        var user =
-            UsingDbContext(
-                context =>
-                    context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
-        if (user == null)
+        #region Login
+
+        protected void LoginAsHostAdmin()
         {
-            throw new Exception("There is no user: " + userName + " for tenant: " + tenancyName);
+            LoginAsHost(AbpUserBase.AdminUserName);
         }
 
-        AbpSession.UserId = user.Id;
-    }
+        protected void LoginAsDefaultTenantAdmin()
+        {
+            LoginAsTenant(AbpTenantBase.DefaultTenantName, AbpUserBase.AdminUserName);
+        }
 
-    #endregion
+        protected void LoginAsHost(string userName)
+        {
+            AbpSession.TenantId = null;
 
-    /// <summary>
-    /// Gets current user if <see cref="IAbpSession.UserId"/> is not null.
-    /// Throws exception if it's null.
-    /// </summary>
-    protected async Task<User> GetCurrentUserAsync()
-    {
-        var userId = AbpSession.GetUserId();
-        return await UsingDbContext(context => context.Users.SingleAsync(u => u.Id == userId));
-    }
+            var user =
+                UsingDbContext(
+                    context =>
+                        context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
+            if (user == null)
+            {
+                throw new Exception("There is no user: " + userName + " for host.");
+            }
 
-    /// <summary>
-    /// Gets current tenant if <see cref="IAbpSession.TenantId"/> is not null.
-    /// Throws exception if there is no current tenant.
-    /// </summary>
-    protected async Task<Tenant> GetCurrentTenantAsync()
-    {
-        var tenantId = AbpSession.GetTenantId();
-        return await UsingDbContext(context => context.Tenants.SingleAsync(t => t.Id == tenantId));
+            AbpSession.UserId = user.Id;
+        }
+
+        protected void LoginAsTenant(string tenancyName, string userName)
+        {
+            var tenant = UsingDbContext(context => context.Tenants.FirstOrDefault(t => t.TenancyName == tenancyName));
+            if (tenant == null)
+            {
+                throw new Exception("There is no tenant: " + tenancyName);
+            }
+
+            AbpSession.TenantId = tenant.Id;
+
+            var user =
+                UsingDbContext(
+                    context =>
+                        context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
+            if (user == null)
+            {
+                throw new Exception("There is no user: " + userName + " for tenant: " + tenancyName);
+            }
+
+            AbpSession.UserId = user.Id;
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Gets current user if <see cref="IAbpSession.UserId"/> is not null.
+        /// Throws exception if it's null.
+        /// </summary>
+        protected async Task<User> GetCurrentUserAsync()
+        {
+            var userId = AbpSession.GetUserId();
+            return await UsingDbContext(context => context.Users.SingleAsync(u => u.Id == userId));
+        }
+
+        /// <summary>
+        /// Gets current tenant if <see cref="IAbpSession.TenantId"/> is not null.
+        /// Throws exception if there is no current tenant.
+        /// </summary>
+        protected async Task<Tenant> GetCurrentTenantAsync()
+        {
+            var tenantId = AbpSession.GetTenantId();
+            return await UsingDbContext(context => context.Tenants.SingleAsync(t => t.Id == tenantId));
+        }
     }
 }

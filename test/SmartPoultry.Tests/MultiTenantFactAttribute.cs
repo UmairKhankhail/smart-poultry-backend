@@ -1,14 +1,15 @@
 ﻿using Xunit;
 
-namespace SmartPoultry.Tests;
-
-public sealed class MultiTenantFactAttribute : FactAttribute
+namespace SmartPoultry.Tests
 {
-    public MultiTenantFactAttribute()
+    public sealed class MultiTenantFactAttribute : FactAttribute
     {
-        if (!SmartPoultryConsts.MultiTenancyEnabled)
+        public MultiTenantFactAttribute()
         {
-            Skip = "MultiTenancy is disabled.";
+            if (!SmartPoultryConsts.MultiTenancyEnabled)
+            {
+                Skip = "MultiTenancy is disabled.";
+            }
         }
     }
 }

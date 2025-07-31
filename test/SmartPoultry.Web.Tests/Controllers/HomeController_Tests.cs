@@ -1,28 +1,29 @@
-﻿using SmartPoultry.Models.TokenAuth;
+﻿using System.Threading.Tasks;
+using SmartPoultry.Models.TokenAuth;
 using SmartPoultry.Web.Controllers;
 using Shouldly;
-using System.Threading.Tasks;
 using Xunit;
 
-namespace SmartPoultry.Web.Tests.Controllers;
-
-public class HomeController_Tests : SmartPoultryWebTestBase
+namespace SmartPoultry.Web.Tests.Controllers
 {
-    [Fact]
-    public async Task Index_Test()
+    public class HomeController_Tests: SmartPoultryWebTestBase
     {
-        await AuthenticateAsync(null, new AuthenticateModel
+        [Fact]
+        public async Task Index_Test()
         {
-            UserNameOrEmailAddress = "admin",
-            Password = "123qwe"
-        });
+            await AuthenticateAsync(null, new AuthenticateModel
+            {
+                UserNameOrEmailAddress = "admin",
+                Password = "123qwe"
+            });
 
-        //Act
-        var response = await GetResponseAsStringAsync(
-            GetUrl<HomeController>(nameof(HomeController.Index))
-        );
+            //Act
+            var response = await GetResponseAsStringAsync(
+                GetUrl<HomeController>(nameof(HomeController.Index))
+            );
 
-        //Assert
-        response.ShouldNotBeNullOrEmpty();
+            //Assert
+            response.ShouldNotBeNullOrEmpty();
+        }
     }
 }

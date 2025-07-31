@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 
-namespace SmartPoultry.Roles.Dto;
-
-public class GetRoleForEditOutput
+namespace SmartPoultry.Roles.Dto
 {
-    public RoleEditDto Role { get; set; }
+    public class GetRoleForEditOutput
+    {
+        public RoleEditDto Role { get; set; }
 
-    public List<FlatPermissionDto> Permissions { get; set; }
+        public List<FlatPermissionDto> Permissions { get; set; }
 
-    public List<string> GrantedPermissionNames { get; set; }
+        public List<string> GrantedPermissionNames { get; set; }
+    }
 }

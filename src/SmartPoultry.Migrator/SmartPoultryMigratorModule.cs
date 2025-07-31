@@ -1,46 +1,47 @@
+using Microsoft.Extensions.Configuration;
+using Castle.MicroKernel.Registration;
 using Abp.Events.Bus;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using SmartPoultry.Configuration;
 using SmartPoultry.EntityFrameworkCore;
 using SmartPoultry.Migrator.DependencyInjection;
-using Castle.MicroKernel.Registration;
-using Microsoft.Extensions.Configuration;
 
-namespace SmartPoultry.Migrator;
-
-[DependsOn(typeof(SmartPoultryEntityFrameworkModule))]
-public class SmartPoultryMigratorModule : AbpModule
+namespace SmartPoultry.Migrator
 {
-    private readonly IConfigurationRoot _appConfiguration;
-
-    public SmartPoultryMigratorModule(SmartPoultryEntityFrameworkModule abpProjectNameEntityFrameworkModule)
+    [DependsOn(typeof(SmartPoultryEntityFrameworkModule))]
+    public class SmartPoultryMigratorModule : AbpModule
     {
-        abpProjectNameEntityFrameworkModule.SkipDbSeed = true;
+        private readonly IConfigurationRoot _appConfiguration;
 
-        _appConfiguration = AppConfigurations.Get(
-            typeof(SmartPoultryMigratorModule).GetAssembly().GetDirectoryPathOrNull()
-        );
-    }
+        public SmartPoultryMigratorModule(SmartPoultryEntityFrameworkModule abpProjectNameEntityFrameworkModule)
+        {
+            abpProjectNameEntityFrameworkModule.SkipDbSeed = true;
 
-    public override void PreInitialize()
-    {
-        Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
-            SmartPoultryConsts.ConnectionStringName
-        );
+            _appConfiguration = AppConfigurations.Get(
+                typeof(SmartPoultryMigratorModule).GetAssembly().GetDirectoryPathOrNull()
+            );
+        }
 
-        Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
-        Configuration.ReplaceService(
-            typeof(IEventBus),
-            () => IocManager.IocContainer.Register(
-                Component.For<IEventBus>().Instance(NullEventBus.Instance)
-            )
-        );
-    }
+        public override void PreInitialize()
+        {
+            Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
+                SmartPoultryConsts.ConnectionStringName
+            );
 
-    public override void Initialize()
-    {
-        IocManager.RegisterAssemblyByConvention(typeof(SmartPoultryMigratorModule).GetAssembly());
-        ServiceCollectionRegistrar.Register(IocManager);
+            Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
+            Configuration.ReplaceService(
+                typeof(IEventBus), 
+                () => IocManager.IocContainer.Register(
+                    Component.For<IEventBus>().Instance(NullEventBus.Instance)
+                )
+            );
+        }
+
+        public override void Initialize()
+        {
+            IocManager.RegisterAssemblyByConvention(typeof(SmartPoultryMigratorModule).GetAssembly());
+            ServiceCollectionRegistrar.Register(IocManager);
+        }
     }
 }

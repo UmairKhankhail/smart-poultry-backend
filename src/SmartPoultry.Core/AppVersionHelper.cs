@@ -1,25 +1,26 @@
-﻿using Abp.Reflection.Extensions;
-using System;
+﻿using System;
 using System.IO;
+using Abp.Reflection.Extensions;
 
-namespace SmartPoultry;
-
-/// <summary>
-/// Central point for application version.
-/// </summary>
-public class AppVersionHelper
+namespace SmartPoultry
 {
     /// <summary>
-    /// Gets current version of the application.
-    /// It's also shown in the web page.
+    /// Central point for application version.
     /// </summary>
-    public const string Version = "9.3.0";
+    public class AppVersionHelper
+    {
+        /// <summary>
+        /// Gets current version of the application.
+        /// It's also shown in the web page.
+        /// </summary>
+        public const string Version = "7.3.0.0";
 
-    /// <summary>
-    /// Gets release (last build) date of the application.
-    /// It's shown in the web page.
-    /// </summary>
-    public static DateTime ReleaseDate => LzyReleaseDate.Value;
+        /// <summary>
+        /// Gets release (last build) date of the application.
+        /// It's shown in the web page.
+        /// </summary>
+        public static DateTime ReleaseDate => LzyReleaseDate.Value;
 
-    private static readonly Lazy<DateTime> LzyReleaseDate = new Lazy<DateTime>(() => new FileInfo(typeof(AppVersionHelper).GetAssembly().Location).LastWriteTime);
+        private static readonly Lazy<DateTime> LzyReleaseDate = new Lazy<DateTime>(() => new FileInfo(typeof(AppVersionHelper).GetAssembly().Location).LastWriteTime);
+    }
 }

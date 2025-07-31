@@ -1,56 +1,57 @@
+using System.Threading.Tasks;
 using Abp.Configuration;
 using Abp.Zero.Configuration;
 using SmartPoultry.Authorization.Accounts.Dto;
 using SmartPoultry.Authorization.Users;
-using System.Threading.Tasks;
 
-namespace SmartPoultry.Authorization.Accounts;
-
-public class AccountAppService : SmartPoultryAppServiceBase, IAccountAppService
+namespace SmartPoultry.Authorization.Accounts
 {
-    // from: http://regexlib.com/REDetails.aspx?regexp_id=1923
-    public const string PasswordRegex = "(?=^.{8,}$)(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s)[0-9a-zA-Z!@#$%^&*()]*$";
-
-    private readonly UserRegistrationManager _userRegistrationManager;
-
-    public AccountAppService(
-        UserRegistrationManager userRegistrationManager)
+    public class AccountAppService : SmartPoultryAppServiceBase, IAccountAppService
     {
-        _userRegistrationManager = userRegistrationManager;
-    }
+        // from: http://regexlib.com/REDetails.aspx?regexp_id=1923
+        public const string PasswordRegex = "(?=^.{8,}$)(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\\s)[0-9a-zA-Z!@#$%^&*()]*$";
 
-    public async Task<IsTenantAvailableOutput> IsTenantAvailable(IsTenantAvailableInput input)
-    {
-        var tenant = await TenantManager.FindByTenancyNameAsync(input.TenancyName);
-        if (tenant == null)
+        private readonly UserRegistrationManager _userRegistrationManager;
+
+        public AccountAppService(
+            UserRegistrationManager userRegistrationManager)
         {
-            return new IsTenantAvailableOutput(TenantAvailabilityState.NotFound);
+            _userRegistrationManager = userRegistrationManager;
         }
 
-        if (!tenant.IsActive)
+        public async Task<IsTenantAvailableOutput> IsTenantAvailable(IsTenantAvailableInput input)
         {
-            return new IsTenantAvailableOutput(TenantAvailabilityState.InActive);
+            var tenant = await TenantManager.FindByTenancyNameAsync(input.TenancyName);
+            if (tenant == null)
+            {
+                return new IsTenantAvailableOutput(TenantAvailabilityState.NotFound);
+            }
+
+            if (!tenant.IsActive)
+            {
+                return new IsTenantAvailableOutput(TenantAvailabilityState.InActive);
+            }
+
+            return new IsTenantAvailableOutput(TenantAvailabilityState.Available, tenant.Id);
         }
 
-        return new IsTenantAvailableOutput(TenantAvailabilityState.Available, tenant.Id);
-    }
-
-    public async Task<RegisterOutput> Register(RegisterInput input)
-    {
-        var user = await _userRegistrationManager.RegisterAsync(
-            input.Name,
-            input.Surname,
-            input.EmailAddress,
-            input.UserName,
-            input.Password,
-            true // Assumed email address is always confirmed. Change this if you want to implement email confirmation.
-        );
-
-        var isEmailConfirmationRequiredForLogin = await SettingManager.GetSettingValueAsync<bool>(AbpZeroSettingNames.UserManagement.IsEmailConfirmationRequiredForLogin);
-
-        return new RegisterOutput
+        public async Task<RegisterOutput> Register(RegisterInput input)
         {
-            CanLogin = user.IsActive && (user.IsEmailConfirmed || !isEmailConfirmationRequiredForLogin)
-        };
+            var user = await _userRegistrationManager.RegisterAsync(
+                input.Name,
+                input.Surname,
+                input.EmailAddress,
+                input.UserName,
+                input.Password,
+                true // Assumed email address is always confirmed. Change this if you want to implement email confirmation.
+            );
+
+            var isEmailConfirmationRequiredForLogin = await SettingManager.GetSettingValueAsync<bool>(AbpZeroSettingNames.UserManagement.IsEmailConfirmationRequiredForLogin);
+
+            return new RegisterOutput
+            {
+                CanLogin = user.IsActive && (user.IsEmailConfirmed || !isEmailConfirmationRequiredForLogin)
+            };
+        }
     }
 }

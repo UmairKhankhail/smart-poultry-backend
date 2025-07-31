@@ -1,42 +1,43 @@
-﻿using Abp.MultiTenancy;
+﻿using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Abp.MultiTenancy;
 using SmartPoultry.Editions;
 using SmartPoultry.MultiTenancy;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
-namespace SmartPoultry.EntityFrameworkCore.Seed.Tenants;
-
-public class DefaultTenantBuilder
+namespace SmartPoultry.EntityFrameworkCore.Seed.Tenants
 {
-    private readonly SmartPoultryDbContext _context;
-
-    public DefaultTenantBuilder(SmartPoultryDbContext context)
+    public class DefaultTenantBuilder
     {
-        _context = context;
-    }
+        private readonly SmartPoultryDbContext _context;
 
-    public void Create()
-    {
-        CreateDefaultTenant();
-    }
-
-    private void CreateDefaultTenant()
-    {
-        // Default tenant
-
-        var defaultTenant = _context.Tenants.IgnoreQueryFilters().FirstOrDefault(t => t.TenancyName == AbpTenantBase.DefaultTenantName);
-        if (defaultTenant == null)
+        public DefaultTenantBuilder(SmartPoultryDbContext context)
         {
-            defaultTenant = new Tenant(AbpTenantBase.DefaultTenantName, AbpTenantBase.DefaultTenantName);
+            _context = context;
+        }
 
-            var defaultEdition = _context.Editions.IgnoreQueryFilters().FirstOrDefault(e => e.Name == EditionManager.DefaultEditionName);
-            if (defaultEdition != null)
+        public void Create()
+        {
+            CreateDefaultTenant();
+        }
+
+        private void CreateDefaultTenant()
+        {
+            // Default tenant
+
+            var defaultTenant = _context.Tenants.IgnoreQueryFilters().FirstOrDefault(t => t.TenancyName == AbpTenantBase.DefaultTenantName);
+            if (defaultTenant == null)
             {
-                defaultTenant.EditionId = defaultEdition.Id;
-            }
+                defaultTenant = new Tenant(AbpTenantBase.DefaultTenantName, AbpTenantBase.DefaultTenantName);
 
-            _context.Tenants.Add(defaultTenant);
-            _context.SaveChanges();
+                var defaultEdition = _context.Editions.IgnoreQueryFilters().FirstOrDefault(e => e.Name == EditionManager.DefaultEditionName);
+                if (defaultEdition != null)
+                {
+                    defaultTenant.EditionId = defaultEdition.Id;
+                }
+
+                _context.Tenants.Add(defaultTenant);
+                _context.SaveChanges();
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using Abp.Dependency;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Abp.Dependency;
 
 namespace SmartPoultry.Authentication.External
 {

@@ -1,9 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace SmartPoultry.Users.Dto;
-
-public class ChangeUserLanguageDto
+namespace SmartPoultry.Users.Dto
 {
-    [Required]
-    public string LanguageName { get; set; }
+    public class ChangeUserLanguageDto
+    {
+        [Required]
+        public string LanguageName { get; set; }
+    }
 }

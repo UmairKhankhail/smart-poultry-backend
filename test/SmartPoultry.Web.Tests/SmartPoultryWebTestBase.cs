@@ -1,4 +1,11 @@
-﻿using Abp.AspNetCore.TestBase;
+﻿using System;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+using Abp.AspNetCore.TestBase;
 using Abp.Authorization.Users;
 using Abp.Extensions;
 using Abp.Json;
@@ -10,205 +17,200 @@ using SmartPoultry.Web.Startup;
 using AngleSharp.Html.Dom;
 using AngleSharp.Html.Parser;
 using Microsoft.AspNetCore.Hosting;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Shouldly;
-using System;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
 
-namespace SmartPoultry.Web.Tests;
-
-public abstract class SmartPoultryWebTestBase : AbpAspNetCoreIntegratedTestBase<Startup>
+namespace SmartPoultry.Web.Tests
 {
-    protected static readonly Lazy<string> ContentRootFolder;
-
-    static SmartPoultryWebTestBase()
+    public abstract class SmartPoultryWebTestBase : AbpAspNetCoreIntegratedTestBase<Startup>
     {
-        ContentRootFolder = new Lazy<string>(WebContentDirectoryFinder.CalculateContentRootFolder, true);
-    }
+        protected static readonly Lazy<string> ContentRootFolder;
 
-    protected override IWebHostBuilder CreateWebHostBuilder()
-    {
-        return base
-            .CreateWebHostBuilder()
-            .UseContentRoot(ContentRootFolder.Value)
-            .UseSetting(WebHostDefaults.ApplicationKey, typeof(SmartPoultryWebMvcModule).Assembly.FullName);
-    }
-
-    #region Get response
-
-    protected async Task<T> GetResponseAsObjectAsync<T>(string url,
-        HttpStatusCode expectedStatusCode = HttpStatusCode.OK)
-    {
-        var strResponse = await GetResponseAsStringAsync(url, expectedStatusCode);
-        return JsonSerializer.Deserialize<T>(strResponse, new JsonSerializerOptions()
+        static SmartPoultryWebTestBase()
         {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-        });
-    }
+            ContentRootFolder = new Lazy<string>(WebContentDirectoryFinder.CalculateContentRootFolder, true);
+        }
+        
+        protected override IWebHostBuilder CreateWebHostBuilder()
+        {
+            return base
+                .CreateWebHostBuilder()
+                .UseContentRoot(ContentRootFolder.Value)
+                .UseSetting(WebHostDefaults.ApplicationKey, typeof(SmartPoultryWebMvcModule).Assembly.FullName);
+        }
 
-    protected async Task<string> GetResponseAsStringAsync(string url,
-        HttpStatusCode expectedStatusCode = HttpStatusCode.OK)
-    {
-        var response = await GetResponseAsync(url, expectedStatusCode);
-        return await response.Content.ReadAsStringAsync();
-    }
+        #region Get response
 
-    protected async Task<HttpResponseMessage> GetResponseAsync(string url,
-        HttpStatusCode expectedStatusCode = HttpStatusCode.OK)
-    {
-        var response = await Client.GetAsync(url);
-        response.StatusCode.ShouldBe(expectedStatusCode);
-        return response;
-    }
+        protected async Task<T> GetResponseAsObjectAsync<T>(string url,
+            HttpStatusCode expectedStatusCode = HttpStatusCode.OK)
+        {
+            var strResponse = await GetResponseAsStringAsync(url, expectedStatusCode);
+            return JsonConvert.DeserializeObject<T>(strResponse, new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            });
+        }
 
-    #endregion
+        protected async Task<string> GetResponseAsStringAsync(string url,
+            HttpStatusCode expectedStatusCode = HttpStatusCode.OK)
+        {
+            var response = await GetResponseAsync(url, expectedStatusCode);
+            return await response.Content.ReadAsStringAsync();
+        }
 
-    #region Authenticate
+        protected async Task<HttpResponseMessage> GetResponseAsync(string url,
+            HttpStatusCode expectedStatusCode = HttpStatusCode.OK)
+        {
+            var response = await Client.GetAsync(url);
+            response.StatusCode.ShouldBe(expectedStatusCode);
+            return response;
+        }
 
-    /// <summary>
-    /// /api/TokenAuth/Authenticate
-    /// TokenAuthController
-    /// </summary>
-    /// <param name="tenancyName"></param>
-    /// <param name="input"></param>
-    /// <returns></returns>
-    protected async Task AuthenticateAsync(string tenancyName, AuthenticateModel input)
-    {
-        if (tenancyName.IsNullOrWhiteSpace())
+        #endregion
+        
+        #region Authenticate
+        
+        /// <summary>
+        /// /api/TokenAuth/Authenticate
+        /// TokenAuthController
+        /// </summary>
+        /// <param name="tenancyName"></param>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        protected async Task AuthenticateAsync(string tenancyName, AuthenticateModel input)
+        {
+            if (tenancyName.IsNullOrWhiteSpace())
+            { 
+                var tenant = UsingDbContext(context => context.Tenants.FirstOrDefault(t => t.TenancyName == tenancyName));
+                if (tenant != null)
+                {
+                    AbpSession.TenantId = tenant.Id;
+                    Client.DefaultRequestHeaders.Add("Abp.TenantId", tenant.Id.ToString());  //Set TenantId
+                }
+            }
+
+            var response = await Client.PostAsync("/api/TokenAuth/Authenticate",
+                new StringContent(input.ToJsonString(), Encoding.UTF8, "application/json"));
+            response.StatusCode.ShouldBe(HttpStatusCode.OK);
+            var result =
+                JsonConvert.DeserializeObject<AjaxResponse<AuthenticateResultModel>>(
+                    await response.Content.ReadAsStringAsync());
+            Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", result.Result.AccessToken);
+            
+            AbpSession.UserId = result.Result.UserId;
+        }
+        
+        #endregion
+        
+        #region Login
+
+        protected void LoginAsHostAdmin()
+        {
+            LoginAsHost(AbpUserBase.AdminUserName);
+        }
+
+        protected void LoginAsDefaultTenantAdmin()
+        {
+            LoginAsTenant(AbpTenantBase.DefaultTenantName, AbpUserBase.AdminUserName);
+        }
+
+        protected void LoginAsHost(string userName)
+        {
+            AbpSession.TenantId = null;
+
+            var user =
+                UsingDbContext(
+                    context =>
+                        context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
+            if (user == null)
+            {
+                throw new Exception("There is no user: " + userName + " for host.");
+            }
+
+            AbpSession.UserId = user.Id;
+        }
+
+        protected void LoginAsTenant(string tenancyName, string userName)
         {
             var tenant = UsingDbContext(context => context.Tenants.FirstOrDefault(t => t.TenancyName == tenancyName));
-            if (tenant != null)
+            if (tenant == null)
             {
-                AbpSession.TenantId = tenant.Id;
-                Client.DefaultRequestHeaders.Add("Abp-TenantId", tenant.Id.ToString());  //Set TenantId
+                throw new Exception("There is no tenant: " + tenancyName);
+            }
+
+            AbpSession.TenantId = tenant.Id;
+
+            var user =
+                UsingDbContext(
+                    context =>
+                        context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
+            if (user == null)
+            {
+                throw new Exception("There is no user: " + userName + " for tenant: " + tenancyName);
+            }
+
+            AbpSession.UserId = user.Id;
+        }
+
+        #endregion
+
+
+        #region UsingDbContext
+
+        protected void UsingDbContext(Action<SmartPoultryDbContext> action)
+        {
+            using (var context = IocManager.Resolve<SmartPoultryDbContext>())
+            {
+                action(context);
+                context.SaveChanges();
             }
         }
 
-        var response = await Client.PostAsync("/api/TokenAuth/Authenticate",
-            new StringContent(input.ToJsonString(), Encoding.UTF8, "application/json"));
-        response.StatusCode.ShouldBe(HttpStatusCode.OK);
-        var result = JsonSerializer.Deserialize<AjaxResponse<AuthenticateResultModel>>(await response.Content.ReadAsStringAsync(), new JsonSerializerOptions()
+        protected T UsingDbContext<T>(Func<SmartPoultryDbContext, T> func)
         {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-        });
-        Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", result.Result.AccessToken);
+            T result;
 
-        AbpSession.UserId = result.Result.UserId;
-    }
+            using (var context = IocManager.Resolve<SmartPoultryDbContext>())
+            {
+                result = func(context);
+                context.SaveChanges();
+            }
 
-    #endregion
-
-    #region Login
-
-    protected void LoginAsHostAdmin()
-    {
-        LoginAsHost(AbpUserBase.AdminUserName);
-    }
-
-    protected void LoginAsDefaultTenantAdmin()
-    {
-        LoginAsTenant(AbpTenantBase.DefaultTenantName, AbpUserBase.AdminUserName);
-    }
-
-    protected void LoginAsHost(string userName)
-    {
-        AbpSession.TenantId = null;
-
-        var user =
-            UsingDbContext(
-                context =>
-                    context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
-        if (user == null)
-        {
-            throw new Exception("There is no user: " + userName + " for host.");
+            return result;
         }
 
-        AbpSession.UserId = user.Id;
-    }
-
-    protected void LoginAsTenant(string tenancyName, string userName)
-    {
-        var tenant = UsingDbContext(context => context.Tenants.FirstOrDefault(t => t.TenancyName == tenancyName));
-        if (tenant == null)
+        protected async Task UsingDbContextAsync(Func<SmartPoultryDbContext, Task> action)
         {
-            throw new Exception("There is no tenant: " + tenancyName);
+            using (var context = IocManager.Resolve<SmartPoultryDbContext>())
+            {
+                await action(context);
+                await context.SaveChangesAsync(true);
+            }
         }
 
-        AbpSession.TenantId = tenant.Id;
-
-        var user =
-            UsingDbContext(
-                context =>
-                    context.Users.FirstOrDefault(u => u.TenantId == AbpSession.TenantId && u.UserName == userName));
-        if (user == null)
+        protected async Task<T> UsingDbContextAsync<T>(Func<SmartPoultryDbContext, Task<T>> func)
         {
-            throw new Exception("There is no user: " + userName + " for tenant: " + tenancyName);
+            T result;
+
+            using (var context = IocManager.Resolve<SmartPoultryDbContext>())
+            {
+                result = await func(context);
+                await context.SaveChangesAsync(true);
+            }
+
+            return result;
         }
 
-        AbpSession.UserId = user.Id;
-    }
+        #endregion
 
-    #endregion
+        #region ParseHtml
 
-    #region UsingDbContext
-
-    protected void UsingDbContext(Action<SmartPoultryDbContext> action)
-    {
-        using (var context = IocManager.Resolve<SmartPoultryDbContext>())
+        protected IHtmlDocument ParseHtml(string htmlString)
         {
-            action(context);
-            context.SaveChanges();
-        }
-    }
-
-    protected T UsingDbContext<T>(Func<SmartPoultryDbContext, T> func)
-    {
-        T result;
-
-        using (var context = IocManager.Resolve<SmartPoultryDbContext>())
-        {
-            result = func(context);
-            context.SaveChanges();
+            return new HtmlParser().ParseDocument(htmlString);
         }
 
-        return result;
+        #endregion
     }
-
-    protected async Task UsingDbContextAsync(Func<SmartPoultryDbContext, Task> action)
-    {
-        using (var context = IocManager.Resolve<SmartPoultryDbContext>())
-        {
-            await action(context);
-            await context.SaveChangesAsync(true);
-        }
-    }
-
-    protected async Task<T> UsingDbContextAsync<T>(Func<SmartPoultryDbContext, Task<T>> func)
-    {
-        T result;
-
-        using (var context = IocManager.Resolve<SmartPoultryDbContext>())
-        {
-            result = await func(context);
-            await context.SaveChangesAsync(true);
-        }
-
-        return result;
-    }
-
-    #endregion
-
-    #region ParseHtml
-
-    protected IHtmlDocument ParseHtml(string htmlString)
-    {
-        return new HtmlParser().ParseDocument(htmlString);
-    }
-
-    #endregion
 }

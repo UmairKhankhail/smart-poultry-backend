@@ -3,17 +3,18 @@ using Abp.Application.Features;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 
-namespace SmartPoultry.Editions;
-
-public class EditionManager : AbpEditionManager
+namespace SmartPoultry.Editions
 {
-    public const string DefaultEditionName = "Standard";
-
-    public EditionManager(
-        IRepository<Edition> editionRepository,
-        IAbpZeroFeatureValueStore featureValueStore,
-        IUnitOfWorkManager unitOfWorkManager)
-        : base(editionRepository, featureValueStore, unitOfWorkManager)
+    public class EditionManager : AbpEditionManager
     {
+        public const string DefaultEditionName = "Standard";
+
+        public EditionManager(
+            IRepository<Edition> editionRepository,
+            IAbpZeroFeatureValueStore featureValueStore,
+            IUnitOfWorkManager unitOfWorkManager) 
+            : base(editionRepository, featureValueStore, unitOfWorkManager)
+        {
+        }
     }
 }

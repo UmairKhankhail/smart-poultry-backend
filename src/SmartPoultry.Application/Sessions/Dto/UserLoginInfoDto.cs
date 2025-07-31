@@ -2,16 +2,17 @@
 using Abp.AutoMapper;
 using SmartPoultry.Authorization.Users;
 
-namespace SmartPoultry.Sessions.Dto;
-
-[AutoMapFrom(typeof(User))]
-public class UserLoginInfoDto : EntityDto<long>
+namespace SmartPoultry.Sessions.Dto
 {
-    public string Name { get; set; }
+    [AutoMapFrom(typeof(User))]
+    public class UserLoginInfoDto : EntityDto<long>
+    {
+        public string Name { get; set; }
 
-    public string Surname { get; set; }
+        public string Surname { get; set; }
 
-    public string UserName { get; set; }
+        public string UserName { get; set; }
 
-    public string EmailAddress { get; set; }
+        public string EmailAddress { get; set; }
+    }
 }

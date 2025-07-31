@@ -1,9 +1,10 @@
-﻿using SmartPoultry.Configuration.Dto;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using SmartPoultry.Configuration.Dto;
 
-namespace SmartPoultry.Configuration;
-
-public interface IConfigurationAppService
+namespace SmartPoultry.Configuration
 {
-    Task ChangeUiTheme(ChangeUiThemeInput input);
+    public interface IConfigurationAppService
+    {
+        Task ChangeUiTheme(ChangeUiThemeInput input);
+    }
 }

@@ -1,12 +1,13 @@
-﻿using Abp.Dependency;
-using System;
+﻿using System;
+using Abp.Dependency;
 
-namespace SmartPoultry.Timing;
-
-public class AppTimes : ISingletonDependency
+namespace SmartPoultry.Timing
 {
-    /// <summary>
-    /// Gets the startup time of the application.
-    /// </summary>
-    public DateTime StartupTime { get; set; }
+    public class AppTimes : ISingletonDependency
+    {
+        /// <summary>
+        /// Gets the startup time of the application.
+        /// </summary>
+        public DateTime StartupTime { get; set; }
+    }
 }

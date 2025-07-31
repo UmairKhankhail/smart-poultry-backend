@@ -1,17 +1,18 @@
-using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
+using Microsoft.EntityFrameworkCore;
 
-namespace SmartPoultry.EntityFrameworkCore;
-
-public static class SmartPoultryDbContextConfigurer
+namespace SmartPoultry.EntityFrameworkCore
 {
-    public static void Configure(DbContextOptionsBuilder<SmartPoultryDbContext> builder, string connectionString)
+    public static class SmartPoultryDbContextConfigurer
     {
-        builder.UseSqlServer(connectionString);
-    }
+        public static void Configure(DbContextOptionsBuilder<SmartPoultryDbContext> builder, string connectionString)
+        {
+            builder.UseSqlServer(connectionString);
+        }
 
-    public static void Configure(DbContextOptionsBuilder<SmartPoultryDbContext> builder, DbConnection connection)
-    {
-        builder.UseSqlServer(connection);
+        public static void Configure(DbContextOptionsBuilder<SmartPoultryDbContext> builder, DbConnection connection)
+        {
+            builder.UseSqlServer(connection);
+        }
     }
 }

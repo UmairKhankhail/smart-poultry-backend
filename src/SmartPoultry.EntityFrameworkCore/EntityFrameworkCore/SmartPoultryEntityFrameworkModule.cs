@@ -4,46 +4,47 @@ using Abp.Reflection.Extensions;
 using Abp.Zero.EntityFrameworkCore;
 using SmartPoultry.EntityFrameworkCore.Seed;
 
-namespace SmartPoultry.EntityFrameworkCore;
-
-[DependsOn(
-    typeof(SmartPoultryCoreModule),
-    typeof(AbpZeroCoreEntityFrameworkCoreModule))]
-public class SmartPoultryEntityFrameworkModule : AbpModule
+namespace SmartPoultry.EntityFrameworkCore
 {
-    /* Used it tests to skip dbcontext registration, in order to use in-memory database of EF Core */
-    public bool SkipDbContextRegistration { get; set; }
-
-    public bool SkipDbSeed { get; set; }
-
-    public override void PreInitialize()
+    [DependsOn(
+        typeof(SmartPoultryCoreModule), 
+        typeof(AbpZeroCoreEntityFrameworkCoreModule))]
+    public class SmartPoultryEntityFrameworkModule : AbpModule
     {
-        if (!SkipDbContextRegistration)
+        /* Used it tests to skip dbcontext registration, in order to use in-memory database of EF Core */
+        public bool SkipDbContextRegistration { get; set; }
+
+        public bool SkipDbSeed { get; set; }
+
+        public override void PreInitialize()
         {
-            Configuration.Modules.AbpEfCore().AddDbContext<SmartPoultryDbContext>(options =>
+            if (!SkipDbContextRegistration)
             {
-                if (options.ExistingConnection != null)
+                Configuration.Modules.AbpEfCore().AddDbContext<SmartPoultryDbContext>(options =>
                 {
-                    SmartPoultryDbContextConfigurer.Configure(options.DbContextOptions, options.ExistingConnection);
-                }
-                else
-                {
-                    SmartPoultryDbContextConfigurer.Configure(options.DbContextOptions, options.ConnectionString);
-                }
-            });
+                    if (options.ExistingConnection != null)
+                    {
+                        SmartPoultryDbContextConfigurer.Configure(options.DbContextOptions, options.ExistingConnection);
+                    }
+                    else
+                    {
+                        SmartPoultryDbContextConfigurer.Configure(options.DbContextOptions, options.ConnectionString);
+                    }
+                });
+            }
         }
-    }
 
-    public override void Initialize()
-    {
-        IocManager.RegisterAssemblyByConvention(typeof(SmartPoultryEntityFrameworkModule).GetAssembly());
-    }
-
-    public override void PostInitialize()
-    {
-        if (!SkipDbSeed)
+        public override void Initialize()
         {
-            SeedHelper.SeedHostDb(IocManager);
+            IocManager.RegisterAssemblyByConvention(typeof(SmartPoultryEntityFrameworkModule).GetAssembly());
+        }
+
+        public override void PostInitialize()
+        {
+            if (!SkipDbSeed)
+            {
+                SeedHelper.SeedHostDb(IocManager);
+            }
         }
     }
 }

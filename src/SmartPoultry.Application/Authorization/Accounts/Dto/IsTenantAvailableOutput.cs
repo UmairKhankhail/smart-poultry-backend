@@ -1,18 +1,19 @@
-namespace SmartPoultry.Authorization.Accounts.Dto;
-
-public class IsTenantAvailableOutput
+namespace SmartPoultry.Authorization.Accounts.Dto
 {
-    public TenantAvailabilityState State { get; set; }
-
-    public int? TenantId { get; set; }
-
-    public IsTenantAvailableOutput()
+    public class IsTenantAvailableOutput
     {
-    }
+        public TenantAvailabilityState State { get; set; }
 
-    public IsTenantAvailableOutput(TenantAvailabilityState state, int? tenantId = null)
-    {
-        State = state;
-        TenantId = tenantId;
+        public int? TenantId { get; set; }
+
+        public IsTenantAvailableOutput()
+        {
+        }
+
+        public IsTenantAvailableOutput(TenantAvailabilityState state, int? tenantId = null)
+        {
+            State = state;
+            TenantId = tenantId;
+        }
     }
 }

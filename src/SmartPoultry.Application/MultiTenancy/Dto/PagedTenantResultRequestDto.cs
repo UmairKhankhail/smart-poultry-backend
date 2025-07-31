@@ -1,23 +1,11 @@
 ﻿using Abp.Application.Services.Dto;
-using Abp.Runtime.Validation;
 
-namespace SmartPoultry.MultiTenancy.Dto;
-
-public class PagedTenantResultRequestDto : PagedResultRequestDto, IShouldNormalize
+namespace SmartPoultry.MultiTenancy.Dto
 {
-    public string Keyword { get; set; }
-    public bool? IsActive { get; set; }
-
-    public string Sorting { get; set; }
-
-    public void Normalize()
+    public class PagedTenantResultRequestDto : PagedResultRequestDto
     {
-        if (string.IsNullOrEmpty(Sorting))
-        {
-            Sorting = "TenancyName,Name";
-        }
-
-        Keyword = Keyword?.Trim();
+        public string Keyword { get; set; }
+        public bool? IsActive { get; set; }
     }
 }
 

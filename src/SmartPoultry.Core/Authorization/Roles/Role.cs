@@ -1,27 +1,28 @@
-﻿using Abp.Authorization.Roles;
+﻿using System.ComponentModel.DataAnnotations;
+using Abp.Authorization.Roles;
 using SmartPoultry.Authorization.Users;
-using System.ComponentModel.DataAnnotations;
 
-namespace SmartPoultry.Authorization.Roles;
-
-public class Role : AbpRole<User>
+namespace SmartPoultry.Authorization.Roles
 {
-    public const int MaxDescriptionLength = 5000;
-
-    public Role()
+    public class Role : AbpRole<User>
     {
-    }
+        public const int MaxDescriptionLength = 5000;
 
-    public Role(int? tenantId, string displayName)
-        : base(tenantId, displayName)
-    {
-    }
+        public Role()
+        {
+        }
 
-    public Role(int? tenantId, string name, string displayName)
-        : base(tenantId, name, displayName)
-    {
-    }
+        public Role(int? tenantId, string displayName)
+            : base(tenantId, displayName)
+        {
+        }
 
-    [StringLength(MaxDescriptionLength)]
-    public string Description { get; set; }
+        public Role(int? tenantId, string name, string displayName)
+            : base(tenantId, name, displayName)
+        {
+        }
+
+        [StringLength(MaxDescriptionLength)]
+        public string Description {get; set;}
+    }
 }

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace SmartPoultry.Controllers
 {
-    public abstract class SmartPoultryControllerBase : AbpController
+    public abstract class SmartPoultryControllerBase: AbpController
     {
         protected SmartPoultryControllerBase()
         {

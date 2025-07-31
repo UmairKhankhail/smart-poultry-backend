@@ -1,33 +1,34 @@
-﻿using Abp.Authorization.Users;
-using Abp.Extensions;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Abp.Authorization.Users;
+using Abp.Extensions;
 
-namespace SmartPoultry.Authorization.Users;
-
-public class User : AbpUser<User>
+namespace SmartPoultry.Authorization.Users
 {
-    public const string DefaultPassword = "123qwe";
-
-    public static string CreateRandomPassword()
+    public class User : AbpUser<User>
     {
-        return Guid.NewGuid().ToString("N").Truncate(16);
-    }
+        public const string DefaultPassword = "123qwe";
 
-    public static User CreateTenantAdminUser(int tenantId, string emailAddress)
-    {
-        var user = new User
+        public static string CreateRandomPassword()
         {
-            TenantId = tenantId,
-            UserName = AdminUserName,
-            Name = AdminUserName,
-            Surname = AdminUserName,
-            EmailAddress = emailAddress,
-            Roles = new List<UserRole>()
-        };
+            return Guid.NewGuid().ToString("N").Truncate(16);
+        }
 
-        user.SetNormalizedNames();
+        public static User CreateTenantAdminUser(int tenantId, string emailAddress)
+        {
+            var user = new User
+            {
+                TenantId = tenantId,
+                UserName = AdminUserName,
+                Name = AdminUserName,
+                Surname = AdminUserName,
+                EmailAddress = emailAddress,
+                Roles = new List<UserRole>()
+            };
 
-        return user;
+            user.SetNormalizedNames();
+
+            return user;
+        }
     }
 }
