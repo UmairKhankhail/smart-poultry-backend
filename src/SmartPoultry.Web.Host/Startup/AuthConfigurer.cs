@@ -54,25 +54,53 @@ namespace SmartPoultry.Web.Host.Startup
 
         /* This method is needed to authorize SignalR javascript client.
          * SignalR can not send authorization header. So, we are getting it from query string as an encrypted text. */
+        //private static Task QueryStringTokenResolver(MessageReceivedContext context)
+        //{
+        //    if (!context.HttpContext.Request.Path.HasValue ||
+        //        !context.HttpContext.Request.Path.Value.StartsWith("/signalr"))
+        //    {
+        //        // We are just looking for signalr clients
+        //        return Task.CompletedTask;
+        //    }
+
+        //    var qsAuthToken = context.HttpContext.Request.Query["enc_auth_token"].FirstOrDefault();
+        //    if (qsAuthToken == null)
+        //    {
+        //        // Cookie value does not matches to querystring value
+        //        return Task.CompletedTask;
+        //    }
+
+        //    // Set auth token from cookie
+        //    context.Token = SimpleStringCipher.Instance.Decrypt(qsAuthToken);
+        //    return Task.CompletedTask;
+        //}
+
         private static Task QueryStringTokenResolver(MessageReceivedContext context)
         {
-            if (!context.HttpContext.Request.Path.HasValue ||
-                !context.HttpContext.Request.Path.Value.StartsWith("/signalr"))
+            var request = context.HttpContext.Request;
+
+            // 1. Check for SignalR path (get token from encrypted query string)
+            if (request.Path.HasValue && request.Path.Value.StartsWith("/signalr"))
             {
-                // We are just looking for signalr clients
+                var qsAuthToken = request.Query["enc_auth_token"].FirstOrDefault();
+                if (!string.IsNullOrWhiteSpace(qsAuthToken))
+                {
+                    context.Token = SimpleStringCipher.Instance.Decrypt(qsAuthToken);
+                    return Task.CompletedTask;
+                }
+            }
+
+            // 2. Check for token in custom header (e.g., x-access-token)
+            if (request.Headers.TryGetValue("x-access-token", out var tokenFromHeader))
+            {
+                context.Token = tokenFromHeader;
                 return Task.CompletedTask;
             }
 
-            var qsAuthToken = context.HttpContext.Request.Query["enc_auth_token"].FirstOrDefault();
-            if (qsAuthToken == null)
-            {
-                // Cookie value does not matches to querystring value
-                return Task.CompletedTask;
-            }
-
-            // Set auth token from cookie
-            context.Token = SimpleStringCipher.Instance.Decrypt(qsAuthToken);
+            // 3. Let default behavior fall back to Authorization header
             return Task.CompletedTask;
         }
+
+
     }
 }

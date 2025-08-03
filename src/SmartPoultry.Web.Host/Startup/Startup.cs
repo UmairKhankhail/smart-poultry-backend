@@ -81,7 +81,7 @@ namespace SmartPoultry.Web.Host.Startup
             services.AddAbpWithoutCreatingServiceProvider<SmartPoultryWebHostModule>(
                 // Configure Log4Net logging
                 options => options.IocManager.IocContainer.AddFacility<LoggingFacility>(
-                    f => f.UseAbpLog4Net().WithConfig(_hostingEnvironment.IsDevelopment()
+                    f => f.UseAbpLog4Net().WithConfig(_hostingEnvironment.IsProduction()
                         ? "log4net.config"
                         : "log4net.Production.config"
                     )
