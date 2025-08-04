@@ -12,9 +12,9 @@ namespace SmartPoultry.EntityFrameworkCore
     public class SmartPoultryEntityFrameworkModule : AbpModule
     {
         /* Used it tests to skip dbcontext registration, in order to use in-memory database of EF Core */
-        public bool SkipDbContextRegistration { get; set; }
+        public bool SkipDbContextRegistration { get; set; } = true;
 
-        public bool SkipDbSeed { get; set; }
+        public bool SkipDbSeed { get; set; } = true;
 
         public override void PreInitialize()
         {
