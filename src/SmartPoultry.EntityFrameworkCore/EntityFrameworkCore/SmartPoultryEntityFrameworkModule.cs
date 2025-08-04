@@ -12,9 +12,9 @@ namespace SmartPoultry.EntityFrameworkCore
     public class SmartPoultryEntityFrameworkModule : AbpModule
     {
         /* Used it tests to skip dbcontext registration, in order to use in-memory database of EF Core */
-        public bool SkipDbContextRegistration { get; set; } = true;
+        public bool SkipDbContextRegistration { get; set; } = false;
 
-        public bool SkipDbSeed { get; set; } = true;
+        public bool SkipDbSeed { get; set; } = false;
 
         public override void PreInitialize()
         {
@@ -32,11 +32,6 @@ namespace SmartPoultry.EntityFrameworkCore
                     }
                 });
             }
-        }
-
-        public override void Initialize()
-        {
-            IocManager.RegisterAssemblyByConvention(typeof(SmartPoultryEntityFrameworkModule).GetAssembly());
         }
 
         public override void PostInitialize()
