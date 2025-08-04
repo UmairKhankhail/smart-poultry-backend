@@ -1,20 +1,21 @@
-# Use SDK image to build the app
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+# Stage 1: Build
+FROM mcr.microsoft.com/dotnet/sdk:2.2 AS build
 
-WORKDIR /src
+WORKDIR /app
 
-# Copy csproj and restore as distinct layers
-COPY *.sln .
-COPY src ./src
+# Copy solution and all projects
+COPY SmartPoultry.sln ./
+COPY src/ ./src/
 
-WORKDIR /src/SmartPoultry.Web.Host
+# Restore dependencies
+WORKDIR /app/src/SmartPoultry.Web.Host
 RUN dotnet restore
 
-# Build the app
+# Publish app
 RUN dotnet publish -c Release -o /app/publish
 
-# Runtime image
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+# Stage 2: Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:2.2
 
 WORKDIR /app
 COPY --from=build /app/publish .
