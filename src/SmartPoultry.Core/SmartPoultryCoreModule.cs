@@ -22,14 +22,14 @@ namespace SmartPoultry
             Configuration.Auditing.IsEnabledForAnonymousUsers = true;
 
             // Declare entity types
-            Configuration.Modules.Zero().EntityTypes.Tenant = typeof(Tenant);
+           // Configuration.Modules.Zero().EntityTypes.Tenant = typeof(Tenant);
             Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
 
             SmartPoultryLocalizationConfigurer.Configure(Configuration.Localization);
 
             // Enable this line to create a multi-tenant application.
-            Configuration.MultiTenancy.IsEnabled = SmartPoultryConsts.MultiTenancyEnabled;
+            Configuration.MultiTenancy.IsEnabled = SmartPoultryConsts.MultiTenancyDisabled;
 
             // Configure roles
             AppRoleConfig.Configure(Configuration.Modules.Zero().RoleManagement);

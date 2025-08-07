@@ -10,6 +10,9 @@ namespace SmartPoultry
 
         public const bool MultiTenancyEnabled = true;
 
+        public const bool MultiTenancyDisabled = true;
+
+
 
         /// <summary>
         /// Default pass phrase for SimpleStringCipher decrypt/encrypt operations
