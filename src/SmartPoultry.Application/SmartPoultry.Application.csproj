@@ -13,5 +13,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\SmartPoultry.Core\SmartPoultry.Core.csproj" />
+    <ProjectReference Include="..\SmartPoultry.EntityFrameworkCore\SmartPoultry.EntityFrameworkCore.csproj" />
   </ItemGroup>
 </Project>

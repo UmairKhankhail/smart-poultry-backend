@@ -3,11 +3,14 @@ using Microsoft.Extensions.Configuration;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using SmartPoultry.Configuration;
+using SmartPoultry.EntityFrameworkCore;
 
 namespace SmartPoultry.Web.Host.Startup
 {
     [DependsOn(
-       typeof(SmartPoultryWebCoreModule))]
+       typeof(SmartPoultryWebCoreModule),
+       typeof(SmartPoultryEntityFrameworkModule)
+        )]
     public class SmartPoultryWebHostModule: AbpModule
     {
         private readonly IWebHostEnvironment _env;
