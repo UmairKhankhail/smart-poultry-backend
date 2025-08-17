@@ -5,6 +5,7 @@ using SmartPoultry.Category.Dto;
 using SmartPoultry.EntityFrameworkCore.Repositories;
 using SmartPoultry.Item;
 using SmartPoultry.Item.Dto;
+using SmartPoultry.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,10 +28,11 @@ namespace SmartPoultry.Items
             _categoryRepository = categoryRepository;
             _mapper = mapper;
         }
-        public async Task<List<Models.Item>> GetAllItemsAsync()
+        public async Task<List<GetItemDto>> GetAllItemsAsync()
         {
-            List<Models.Item> items = await _itemRepository.GetAllListAsync();
-            return items;
+            var items = await _itemRepository.GetAllIncludingAsync(x => x.Category);
+            var mappedItems = _mapper.Map<List<GetItemDto>>(items);
+            return mappedItems;
         }
 
         public async Task<CreateItemDto> InsertItemAsync(CreateItemDto item)

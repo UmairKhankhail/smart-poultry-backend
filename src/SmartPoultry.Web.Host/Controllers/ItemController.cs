@@ -19,7 +19,7 @@ namespace SmartPoultry.Web.Host.Controllers
             _itemService = itemService;
         }
         [HttpGet("get-all")]
-        public async Task<List<Models.Item>> GetAllItems()
+        public async Task<List<GetItemDto>> GetAllItems()
         {
             return await _itemService.GetAllItemsAsync();
         }

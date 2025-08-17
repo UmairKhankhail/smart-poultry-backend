@@ -13,7 +13,7 @@ namespace SmartPoultry.EntityFrameworkCore
         public DbSet<Category> Categories { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Supplier> Suppliers { get; set; }  
+        //public DbSet<Supplier> Suppliers { get; set; }  
         public DbSet<Sale> Sales { get; set; }  
         public DbSet<SaleLineItem> SaleLineItems { get; set; }  
         public DbSet<Purchase> Purchases { get; set; }

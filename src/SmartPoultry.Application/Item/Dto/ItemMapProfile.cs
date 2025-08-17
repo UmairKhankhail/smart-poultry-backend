@@ -14,6 +14,7 @@ namespace SmartPoultry.Item.Dto
             CreateMap<CreateItemDto, Models.Item>();
             CreateMap<UpdateItemDto, Models.Item>();
             CreateMap<Models.Item, CreateItemDto>();
+            CreateMap<Models.Item, GetItemDto>();
         }
     }
 }

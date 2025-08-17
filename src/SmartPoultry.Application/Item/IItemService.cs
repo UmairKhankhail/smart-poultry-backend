@@ -10,7 +10,7 @@ namespace SmartPoultry.Item
 {
     public interface IItemService : IApplicationService
     {
-        Task<List<Models.Item>> GetAllItemsAsync();
+        Task<List<GetItemDto>> GetAllItemsAsync();
         Task<CreateItemDto> InsertItemAsync(CreateItemDto item);
         Task<CreateItemDto> UpdateItemAsync(UpdateItemDto item);
         Task<bool> DeleteItemAsync(int id);
