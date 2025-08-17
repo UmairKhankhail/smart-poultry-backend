@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartPoultry.EntityFrameworkCore;
 
@@ -11,9 +12,10 @@ using SmartPoultry.EntityFrameworkCore;
 namespace SmartPoultry.Migrations
 {
     [DbContext(typeof(SmartPoultryDbContext))]
-    partial class SmartPoultryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250817203429_UnitPrice_Remove_From_SaleLineItem")]
+    partial class UnitPrice_Remove_From_SaleLineItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

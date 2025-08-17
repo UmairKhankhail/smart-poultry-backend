@@ -21,7 +21,6 @@ namespace SmartPoultry.Items
         private readonly ItemRepository _itemRepository;
         private readonly CategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
-
         public ItemService(ItemRepository itemRepository, IMapper mapper, CategoryRepository categoryRepository)
         {
             _itemRepository = itemRepository;
@@ -34,7 +33,11 @@ namespace SmartPoultry.Items
             var mappedItems = _mapper.Map<List<GetItemDto>>(items);
             return mappedItems;
         }
-
+        public async Task<Models.Item> GetById(int id)
+        {
+            var item = await _itemRepository.GetAsync(id);
+            return item;
+        }
         public async Task<CreateItemDto> InsertItemAsync(CreateItemDto item)
         {
             if (item == null)
@@ -49,7 +52,6 @@ namespace SmartPoultry.Items
 
             return _mapper.Map<CreateItemDto>(newItem);
         }
-
         public async Task<CreateItemDto> UpdateItemAsync(UpdateItemDto item)
         {
             if (item == null || item.Id <= 0)
@@ -75,6 +77,16 @@ namespace SmartPoultry.Items
             var existingItem = await _itemRepository.GetAsync(id);
             await _itemRepository.DeleteAsync(existingItem);
             return true;
+        }
+        public async Task<bool> ValidateAndSubstractItemQuantity(Models.Item item, double quantity)
+        {
+            if(item.Quantity > 0 && item.Quantity >= quantity)
+            {
+                item.Quantity -= quantity;
+                await _itemRepository.UpdateAsync(item);
+                return true;
+            }
+            return false;
         }
     }
 }

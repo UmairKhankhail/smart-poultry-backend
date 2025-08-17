@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartPoultry.EntityFrameworkCore;
 
@@ -11,9 +12,10 @@ using SmartPoultry.EntityFrameworkCore;
 namespace SmartPoultry.Migrations
 {
     [DbContext(typeof(SmartPoultryDbContext))]
-    partial class SmartPoultryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250817111103_Sales_Field_Made_Nullable")]
+    partial class Sales_Field_Made_Nullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1756,7 +1758,7 @@ namespace SmartPoultry.Migrations
                     b.Property<DateTime?>("DeletionTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("DueAmount")
+                    b.Property<double?>("DueAmount")
                         .HasColumnType("float");
 
                     b.Property<DateTime>("DueDate")
@@ -1771,14 +1773,14 @@ namespace SmartPoultry.Migrations
                     b.Property<long?>("LastModifierUserId")
                         .HasColumnType("bigint");
 
-                    b.Property<double>("PaidAmount")
+                    b.Property<double?>("PaidAmount")
                         .HasColumnType("float");
 
                     b.Property<string>("Status")
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<double>("TotalAmount")
+                    b.Property<double?>("TotalAmount")
                         .HasColumnType("float");
 
                     b.HasKey("Id");
@@ -1804,6 +1806,9 @@ namespace SmartPoultry.Migrations
 
                     b.Property<int>("SaleId")
                         .HasColumnType("int");
+
+                    b.Property<double>("UnitPrice")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

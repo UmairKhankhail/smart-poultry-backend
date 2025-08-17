@@ -19,6 +19,7 @@
             public const string InvalidRequest = "The request is invalid.";
             public const string InternalServerError = "An internal server error occurred.";
             public const string ValidationError = "There was a validation error.";
+            public const string InValidQuantity = "The item does not have provided quantity.";
 
             // Error handling messages
             public const string DatabaseError = "An error occurred while interacting with the database.";

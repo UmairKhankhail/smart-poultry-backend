@@ -11,7 +11,6 @@ namespace SmartPoultry.Models
         [ForeignKey(nameof(Item))]
         public int ItemId { get; set; }
         public double Quantity { get; set; }
-        public double UnitPrice { get; set; }
 
         public virtual Sale Sale { get; set; }
         public virtual Item Item{ get; set; }
