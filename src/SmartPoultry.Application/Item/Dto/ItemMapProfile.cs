@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SmartPoultry.SaleLineItems.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace SmartPoultry.Item.Dto
             CreateMap<UpdateItemDto, Models.Item>();
             CreateMap<Models.Item, CreateItemDto>();
             CreateMap<Models.Item, GetItemDto>();
+            CreateMap<Models.Item, ItemDto>();
         }
     }
 }

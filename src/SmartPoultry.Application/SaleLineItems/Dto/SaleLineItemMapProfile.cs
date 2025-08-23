@@ -14,6 +14,10 @@ namespace SmartPoultry.SaleLineItems.Dto
         {
             CreateMap<CreateSaleLineItemDto, SaleLineItem>();
             CreateMap<SaleLineItem, CreateSaleLineItemDto>();
+            CreateMap<UpdateSaleLineItemDto,SaleLineItem>();
+            CreateMap<SaleLineItem, GetSaleItemsDto>()
+                .ForMember(dest => dest.TotalAmount, opt => opt.MapFrom(x => x.Item.Price * x.Quantity))
+                .ForMember(dest => dest.Item, opt => opt.MapFrom(x => x.Item));
         }
     }
 }
