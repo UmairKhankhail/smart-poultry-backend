@@ -78,15 +78,6 @@ namespace SmartPoultry.Items
             await _itemRepository.DeleteAsync(existingItem);
             return true;
         }
-        public async Task<bool> ValidateAndSubstractItemQuantity(Models.Item item, double quantity)
-        {
-            if(item.Quantity > 0 && item.Quantity >= quantity)
-            {
-                item.Quantity -= quantity;
-                await _itemRepository.UpdateAsync(item);
-                return true;
-            }
-            return false;
-        }
+        
     }
 }

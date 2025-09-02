@@ -15,6 +15,5 @@ namespace SmartPoultry.Item
         Task<CreateItemDto> InsertItemAsync(CreateItemDto item);
         Task<CreateItemDto> UpdateItemAsync(UpdateItemDto item);
         Task<bool> DeleteItemAsync(int id);
-        Task<bool> ValidateAndSubstractItemQuantity(Models.Item item, double quantity);
     }
 }

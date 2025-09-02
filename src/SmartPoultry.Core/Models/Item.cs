@@ -7,8 +7,6 @@ namespace SmartPoultry.Models
     public class Item : Entity<int>
     {
         public string Name { get; set; }
-        public double Quantity { get; set; }
-        public double Price { get; set; }
         public string UnitOfMeasure { get; set; }
         public string Description { get; set; }
 

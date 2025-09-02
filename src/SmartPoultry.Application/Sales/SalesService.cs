@@ -55,6 +55,7 @@ namespace SmartPoultry.Sales
 
             await _customerRepository.GetAsync(sale.CustomerId);
             var existingCategory = await _saleRepository.GetAsync(sale.Id);
+            existingCategory.DueAmount -= existingCategory.PaidAmount;
             _mapper.Map(sale, existingCategory);
 
             await _saleRepository.UpdateAsync(existingCategory);
@@ -73,10 +74,11 @@ namespace SmartPoultry.Sales
             await _saleRepository.DeleteAsync(existingSale);
             return true;
         }
-        public async Task UpdateSaleAmount(int saleId, double quantity , double price)
+        public async Task UpdateSaleAmount(int saleId, decimal amount)
         {
             var existingSale = await _saleRepository.GetAsync(saleId);
-            existingSale.TotalAmount += (price * quantity);
+            existingSale.TotalAmount += amount;
+            existingSale.DueAmount += amount;
             await _saleRepository.UpdateAsync(existingSale);   
         }
     }

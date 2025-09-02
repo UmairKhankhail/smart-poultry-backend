@@ -40,15 +40,10 @@ namespace SmartPoultry.SaleLineItems
                 throw new UserFriendlyException(ResponseMessages.InvalidData);
             }
             Models.Item item = await _itemService.GetById(saleLineItem.ItemId);
-            bool isValidQuantity = await _itemService.ValidateAndSubstractItemQuantity(item, saleLineItem.Quantity);
-            if (!isValidQuantity)
-            {
-                throw new UserFriendlyException(ResponseMessages.InValidQuantity);
-            }
-
+            
             var newSaleLineItem = _mapper.Map<SaleLineItem>(saleLineItem);
             newSaleLineItem = await _saleLineItemsRepository.InsertAsync(newSaleLineItem);
-            await _salesService.UpdateSaleAmount(saleLineItem.SaleId, saleLineItem.Quantity, item.Price);
+            await _salesService.UpdateSaleAmount(saleLineItem.SaleId, newSaleLineItem.TotalAmount);
 
             return _mapper.Map<CreateSaleLineItemDto>(newSaleLineItem);
         }

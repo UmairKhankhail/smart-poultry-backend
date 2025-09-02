@@ -10,8 +10,10 @@ namespace SmartPoultry.Models
 
         [ForeignKey(nameof(Item))]
         public int ItemId { get; set; }
-        public double Quantity { get; set; }
-
+        public decimal Average { get; set; }
+        public decimal Rate { get; set; }
+        public decimal Weight { get; set; }
+        public decimal TotalAmount { get; set; }
         public virtual Sale Sale { get; set; }
         public virtual Item Item{ get; set; }
     }

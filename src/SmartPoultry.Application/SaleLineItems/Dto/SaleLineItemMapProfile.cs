@@ -1,10 +1,5 @@
 ﻿using AutoMapper;
 using SmartPoultry.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartPoultry.SaleLineItems.Dto
 {
@@ -12,11 +7,11 @@ namespace SmartPoultry.SaleLineItems.Dto
     {
         public SaleLineItemMapProfile()
         {
-            CreateMap<CreateSaleLineItemDto, SaleLineItem>();
+            CreateMap<CreateSaleLineItemDto, SaleLineItem>()
+                     .ForMember(dest => dest.TotalAmount, opt => opt.MapFrom(x => (x.Average * x.Rate) * x.Weight));
             CreateMap<SaleLineItem, CreateSaleLineItemDto>();
-            CreateMap<UpdateSaleLineItemDto,SaleLineItem>();
+            CreateMap<UpdateSaleLineItemDto, SaleLineItem>();
             CreateMap<SaleLineItem, GetSaleItemsDto>()
-                .ForMember(dest => dest.TotalAmount, opt => opt.MapFrom(x => x.Item.Price * x.Quantity))
                 .ForMember(dest => dest.Item, opt => opt.MapFrom(x => x.Item));
         }
     }

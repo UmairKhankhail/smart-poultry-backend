@@ -15,6 +15,6 @@ namespace SmartPoultry.Sales
         Task<CreateSaleDto> InsertSaleAsync(CreateSaleDto sale);
         Task<CreateSaleDto> UpdateSaleAsync(UpdateSaleDto sale);
         Task<bool> DeleteSaleAsync(int id);
-        Task UpdateSaleAmount(int saleId, double quantity, double price);
+        Task UpdateSaleAmount(int saleId, decimal amount);
     }
 }

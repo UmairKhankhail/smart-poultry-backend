@@ -26329,3 +26329,1279 @@ INFO  2025-08-23 15:15:12,562 [8    ] .Mvc.Infrastructure.ObjectResultExecutor -
 INFO  2025-08-23 15:15:12,605 [8    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SaleLineItemsController.GetAllSaleLineItems (SmartPoultry.Web.Host) in 399.1883ms
 INFO  2025-08-23 15:15:12,609 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.GetAllSaleLineItems (SmartPoultry.Web.Host)'
 INFO  2025-08-23 15:15:12,623 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/SaleLineItems/get-all - - - 200 210 application/json;+charset=utf-8 434.7322ms
+DEBUG 2025-08-30 14:53:02,226 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2025-08-30 14:53:02,789 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2025-08-30 14:53:02,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.Web.Host.Startup.SmartPoultryWebHostModule, SmartPoultry.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,818 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.SmartPoultryWebCoreModule, SmartPoultry.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.SmartPoultryApplicationModule, SmartPoultry.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.EntityFrameworkCore.SmartPoultryEntityFrameworkModule, SmartPoultry.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.SmartPoultryCoreModule, SmartPoultry.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,819 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:02,826 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2025-08-30 14:53:03,089 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 14:53:03,090 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 14:53:03,090 [1    ] o.Configuration.LanguageManagementConfig - Converted SmartPoultry (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 14:53:03,090 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 14:53:04,066 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SmartPoultry.EntityFrameworkCore.SmartPoultryDbContext, SmartPoultry.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 14:53:04,303 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2025-08-30 14:53:04,373 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2025-08-30 14:53:04,409 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2025-08-30 14:53:04,424 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SmartPoultry
+DEBUG 2025-08-30 14:53:04,432 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+WARN  2025-08-30 14:53:09,330 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Edition' has a global query filter defined and is the required end of a relationship with the entity 'EditionFeatureSetting'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2025-08-30 14:53:09,334 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Purchase' has a global query filter defined and is the required end of a relationship with the entity 'PurchaseLineItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2025-08-30 14:53:09,337 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Sale' has a global query filter defined and is the required end of a relationship with the entity 'SaleLineItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2025-08-30 14:53:09,484 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'DueAmount' on entity type 'Sale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 14:53:09,487 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'PaidAmount' on entity type 'Sale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 14:53:09,491 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'TotalAmount' on entity type 'Sale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 14:53:09,496 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'Average' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 14:53:09,500 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'Rate' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 14:53:09,504 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'TotalAmount' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 14:53:09,507 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'Weight' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+INFO  2025-08-30 14:53:10,100 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:53:11,377 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[DisplayName], [a].[IsDeleted], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name]
+FROM [AbpEditions] AS [a]
+WHERE [a].[Name] = N'Standard'
+INFO  2025-08-30 14:53:11,661 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,673 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,676 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,682 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,685 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,689 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,693 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,699 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,703 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,705 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,709 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,719 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,730 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:11,762 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[Description], [a].[DisplayName], [a].[IsDefault], [a].[IsDeleted], [a].[IsStatic], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[NormalizedName], [a].[TenantId]
+FROM [AbpRoles] AS [a]
+WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = N'Admin')
+INFO  2025-08-30 14:53:11,863 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__adminRoleForHost_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Name]
+FROM [AbpPermissions] AS [a]
+WHERE ([a].[Discriminator] = N'RolePermissionSetting') AND (([a].[TenantId] IS NULL) AND ([a].[RoleId] = @__adminRoleForHost_Id_0))
+INFO  2025-08-30 14:53:11,882 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AuthenticationSource], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EmailAddress], [a].[EmailConfirmationCode], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockoutEnabled], [a].[IsPhoneNumberConfirmed], [a].[IsTwoFactorEnabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[LockoutEndDateUtc], [a].[Name], [a].[NormalizedEmailAddress], [a].[NormalizedUserName], [a].[Password], [a].[PasswordResetCode], [a].[PhoneNumber], [a].[SecurityStamp], [a].[Surname], [a].[TenantId], [a].[UserName]
+FROM [AbpUsers] AS [a]
+WHERE ([a].[TenantId] IS NULL) AND ([a].[UserName] = N'admin')
+INFO  2025-08-30 14:53:12,004 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND ([a].[TenantId] IS NULL)) AND ([a].[UserId] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:12,007 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND ([a].[TenantId] IS NULL)) AND ([a].[UserId] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:12,015 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND ([a].[TenantId] IS NULL)) AND ([a].[UserId] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 14:53:12,157 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConnectionString], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EditionId], [a].[IsActive], [a].[IsDeleted], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenancyName]
+FROM [AbpTenants] AS [a]
+WHERE [a].[TenancyName] = N'Default'
+INFO  2025-08-30 14:53:12,203 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[Description], [a].[DisplayName], [a].[IsDefault], [a].[IsDeleted], [a].[IsStatic], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[NormalizedName], [a].[TenantId]
+FROM [AbpRoles] AS [a]
+WHERE ([a].[TenantId] = @___tenantId_0) AND ([a].[Name] = N'Admin')
+INFO  2025-08-30 14:53:12,212 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@___tenantId_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Name]
+FROM [AbpPermissions] AS [a]
+WHERE ([a].[Discriminator] = N'RolePermissionSetting') AND (([a].[TenantId] = @___tenantId_0) AND ([a].[RoleId] = @__adminRole_Id_1))
+INFO  2025-08-30 14:53:12,225 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AuthenticationSource], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EmailAddress], [a].[EmailConfirmationCode], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockoutEnabled], [a].[IsPhoneNumberConfirmed], [a].[IsTwoFactorEnabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[LockoutEndDateUtc], [a].[Name], [a].[NormalizedEmailAddress], [a].[NormalizedUserName], [a].[Password], [a].[PasswordResetCode], [a].[PhoneNumber], [a].[SecurityStamp], [a].[Surname], [a].[TenantId], [a].[UserName]
+FROM [AbpUsers] AS [a]
+WHERE ([a].[TenantId] = @___tenantId_0) AND ([a].[UserName] = N'admin')
+DEBUG 2025-08-30 14:53:12,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2025-08-30 14:53:12,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2025-08-30 14:53:12,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Users.Dto.CreateUserDto
+DEBUG 2025-08-30 14:53:12,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Users.Dto.UserDto
+DEBUG 2025-08-30 14:53:12,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2025-08-30 14:53:12,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sessions.Dto.UserLoginInfoDto
+DEBUG 2025-08-30 14:53:12,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sales.Dto.CreateSaleDto
+DEBUG 2025-08-30 14:53:12,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sales.Dto.UpdateSaleDto
+DEBUG 2025-08-30 14:53:12,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Roles.Dto.PermissionDto
+DEBUG 2025-08-30 14:53:12,358 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2025-08-30 14:53:12,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.MultiTenancy.Dto.TenantDto
+DEBUG 2025-08-30 14:53:12,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Item.Dto.CreateItemDto
+DEBUG 2025-08-30 14:53:12,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Customer.Dto.CreateCustomerDto
+DEBUG 2025-08-30 14:53:12,359 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Category.Dto.CreateCategoryDto
+INFO  2025-08-30 14:53:12,820 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:53:12,850 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__ef_filter__p_1='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[DisplayName], [a].[Icon], [a].[IsDeleted], [a].[IsDisabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenantId]
+FROM [AbpLanguages] AS [a]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([a].[IsDeleted] = CAST(0 AS bit))) AND ((@__ef_filter__p_1 = CAST(1 AS bit)) OR ([a].[TenantId] IS NULL))
+INFO  2025-08-30 14:53:12,973 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:53:12,996 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenantId], [a].[UserId], [a].[Value]
+FROM [AbpSettings] AS [a]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([a].[TenantId] IS NULL)) AND (([a].[UserId] IS NULL) AND ([a].[TenantId] IS NULL))
+INFO  2025-08-30 14:53:13,039 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2025-08-30 14:53:14,532 [1    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2025-08-30 14:53:14,535 [1    ] Microsoft.Hosting.Lifetime               - Hosting environment: Production
+INFO  2025-08-30 14:53:14,537 [1    ] Microsoft.Hosting.Lifetime               - Content root path: D:\smart-poultry-backend\src\SmartPoultry.Web.Host
+INFO  2025-08-30 14:53:14,577 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/ - -
+INFO  2025-08-30 14:53:15,293 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.HomeController.Index (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:53:15,365 [3    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SmartPoultry.Web.Host.Controllers.HomeController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:53:15,446 [3    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:53:15,792 [3    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (39ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:53:16,006 [3    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2025-08-30 14:53:16,024 [3    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.HomeController.Index (SmartPoultry.Web.Host) in 643.9537ms
+INFO  2025-08-30 14:53:16,029 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.HomeController.Index (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:53:16,074 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+INFO  2025-08-30 14:53:16,099 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/ - - - 302 - - 1525.7013ms
+INFO  2025-08-30 14:53:16,601 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 518.3510ms
+INFO  2025-08-30 14:53:16,772 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - -
+INFO  2025-08-30 14:53:16,781 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/ui/abp.js - -
+INFO  2025-08-30 14:53:16,785 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/ui/abp.swagger.js - -
+INFO  2025-08-30 14:53:16,798 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - -
+INFO  2025-08-30 14:53:16,821 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 32.6147ms
+INFO  2025-08-30 14:53:16,831 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2025-08-30 14:53:16,835 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2025-08-30 14:53:16,858 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/ui/abp.js - - - 304 - application/javascript 64.5299ms
+INFO  2025-08-30 14:53:16,874 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/ui/abp.swagger.js - - - 304 - application/javascript 88.0922ms
+INFO  2025-08-30 14:53:17,001 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 269.2354ms
+INFO  2025-08-30 14:53:18,568 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - -
+INFO  2025-08-30 14:53:18,576 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.AntiForgeryController.SetCookie (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:53:18,585 [3    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller SmartPoultry.Web.Host.Controllers.AntiForgeryController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:53:18,598 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+INFO  2025-08-30 14:53:18,606 [3    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:53:18,691 [7    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (29ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:53:18,946 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/favicon-32x32.png - -
+INFO  2025-08-30 14:53:18,957 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 14:53:18,972 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2025-08-30 14:53:18,985 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/favicon-32x32.png - - - 200 628 image/png 58.2121ms
+INFO  2025-08-30 14:53:19,266 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 664.4574ms
+INFO  2025-08-30 14:53:19,284 [7    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.AntiForgeryController.SetCookie (SmartPoultry.Web.Host) in 693.8786ms
+INFO  2025-08-30 14:53:19,291 [7    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.AntiForgeryController.SetCookie (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:53:19,300 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - - - 200 101 application/json;+charset=utf-8 726.3895ms
+INFO  2025-08-30 14:53:36,550 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/Sales/get-all - -
+INFO  2025-08-30 14:53:36,557 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:53:36,572 [3    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSales", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.Sales.Dto.GetAllDto]] GetAllSales() on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:53:36,599 [3    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:53:37,164 [3    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount], [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Sales] AS [s]
+INNER JOIN [Customers] AS [c] ON [s].[CustomerId] = [c].[Id]
+WHERE (@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))
+INFO  2025-08-30 14:53:37,271 [3    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:53:37,285 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:53:37,295 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 14:53:37,337 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host) in 762.1169ms
+INFO  2025-08-30 14:53:37,344 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:53:37,354 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/Sales/get-all - - - 200 285 application/json;+charset=utf-8 797.6950ms
+INFO  2025-08-30 14:54:01,873 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/Sales/insert application/json-patch+json 84
+INFO  2025-08-30 14:54:01,885 [8    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2025-08-30 14:54:01,893 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.InsertSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:54:01,924 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "InsertSale", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SmartPoultry.Sales.Dto.CreateSaleDto] InsertSale(SmartPoultry.Sales.Dto.CreateSaleDto) on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:54:02,120 [8    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:54:02,162 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__p_0
+INFO  2025-08-30 14:54:02,234 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = Int32), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 50) (DbType = AnsiString), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sales] ([CreationTime], [CreatorUserId], [CustomerId], [DeleterUserId], [DeletionTime], [DueAmount], [DueDate], [IsDeleted], [LastModificationTime], [LastModifierUserId], [PaidAmount], [Status], [TotalAmount])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+SELECT [Id]
+FROM [Sales]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:54:02,258 [23   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:54:02,264 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:54:02,268 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 14:54:02,274 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.InsertSale (SmartPoultry.Web.Host) in 347.8393ms
+INFO  2025-08-30 14:54:02,277 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.InsertSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:54:02,283 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/Sales/insert application/json-patch+json 84 - 200 168 application/json;+charset=utf-8 408.2690ms
+INFO  2025-08-30 14:54:18,612 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/Sales/get-all - -
+INFO  2025-08-30 14:54:18,615 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:54:18,622 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSales", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.Sales.Dto.GetAllDto]] GetAllSales() on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:54:18,700 [22   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:54:18,755 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount], [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Sales] AS [s]
+INNER JOIN [Customers] AS [c] ON [s].[CustomerId] = [c].[Id]
+WHERE (@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))
+INFO  2025-08-30 14:54:18,762 [22   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:54:18,773 [8    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:54:18,778 [8    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 14:54:18,782 [8    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host) in 157.5323ms
+INFO  2025-08-30 14:54:18,784 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:54:18,790 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/Sales/get-all - - - 200 466 application/json;+charset=utf-8 176.1797ms
+INFO  2025-08-30 14:54:49,886 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/Item/get-all - -
+INFO  2025-08-30 14:54:49,891 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.ItemController.GetAllItems (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:54:49,921 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllItems", controller = "Item", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.Item.Dto.GetItemDto]] GetAllItems() on controller SmartPoultry.Web.Host.Controllers.ItemController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:54:49,937 [5    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:54:49,962 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [i].[Id], [i].[CategoryId], [i].[Description], [i].[Name], [i].[UnitOfMeasure], [c].[Id], [c].[Description], [c].[Name]
+FROM [Items] AS [i]
+INNER JOIN [Categories] AS [c] ON [i].[CategoryId] = [c].[Id]
+INFO  2025-08-30 14:54:50,002 [5    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:54:50,020 [8    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:54:50,028 [8    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 14:54:50,043 [8    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.ItemController.GetAllItems (SmartPoultry.Web.Host) in 119.3264ms
+INFO  2025-08-30 14:54:50,046 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.ItemController.GetAllItems (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:54:50,057 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/Item/get-all - - - 200 428 application/json;+charset=utf-8 162.5889ms
+INFO  2025-08-30 14:55:30,804 [27   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/SaleLineItems/insert application/json-patch+json 84
+INFO  2025-08-30 14:55:30,808 [27   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2025-08-30 14:55:30,811 [27   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:55:30,897 [27   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "InsertSaleLineItem", controller = "SaleLineItems", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SmartPoultry.SaleLineItems.Dto.CreateSaleLineItemDto] InsertSaleLineItem(SmartPoultry.SaleLineItems.Dto.CreateSaleLineItemDto) on controller SmartPoultry.Web.Host.Controllers.SaleLineItemsController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:55:30,942 [27   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:55:30,963 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[CategoryId], [i].[Description], [i].[Name], [i].[UnitOfMeasure]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__p_0
+INFO  2025-08-30 14:55:31,014 [26   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount]
+FROM [Sales] AS [s]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))) AND ([s].[Id] = @__p_0)
+INFO  2025-08-30 14:55:31,088 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = Int32), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [SaleLineItems] ([Average], [ItemId], [Rate], [SaleId], [TotalAmount], [Weight])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [SaleLineItems]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:55:31,113 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = Int32), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 50) (DbType = AnsiString), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Sales] SET [CreationTime] = @p0, [CreatorUserId] = @p1, [CustomerId] = @p2, [DeleterUserId] = @p3, [DeletionTime] = @p4, [DueAmount] = @p5, [DueDate] = @p6, [IsDeleted] = @p7, [LastModificationTime] = @p8, [LastModifierUserId] = @p9, [PaidAmount] = @p10, [Status] = @p11, [TotalAmount] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+INFO  2025-08-30 14:55:31,130 [5    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:55:31,138 [28   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:55:31,154 [28   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 14:55:31,159 [28   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host) in 258.3092ms
+INFO  2025-08-30 14:55:31,163 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:55:31,195 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/SaleLineItems/insert application/json-patch+json 84 - 200 164 application/json;+charset=utf-8 363.0264ms
+INFO  2025-08-30 14:55:45,945 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/SaleLineItems/get-all - -
+INFO  2025-08-30 14:55:45,951 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.GetAllSaleLineItems (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:55:45,962 [28   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSaleLineItems", controller = "SaleLineItems", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.SaleLineItems.Dto.GetSaleItemsDto]] GetAllSaleLineItems() on controller SmartPoultry.Web.Host.Controllers.SaleLineItemsController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:55:45,969 [28   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:55:46,001 [28   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Average], [s].[ItemId], [s].[Rate], [s].[SaleId], [s].[TotalAmount], [s].[Weight], [i].[Id], [i].[CategoryId], [i].[Description], [i].[Name], [i].[UnitOfMeasure]
+FROM [SaleLineItems] AS [s]
+INNER JOIN [Items] AS [i] ON [s].[ItemId] = [i].[Id]
+INFO  2025-08-30 14:55:46,011 [28   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:55:46,021 [28   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:55:46,032 [28   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 14:55:46,043 [28   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SaleLineItemsController.GetAllSaleLineItems (SmartPoultry.Web.Host) in 76.6852ms
+INFO  2025-08-30 14:55:46,046 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.GetAllSaleLineItems (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:55:46,052 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/SaleLineItems/get-all - - - 200 385 application/json;+charset=utf-8 103.6753ms
+INFO  2025-08-30 14:56:35,263 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/Sales/get-all - -
+INFO  2025-08-30 14:56:35,270 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:56:35,374 [28   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSales", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.Sales.Dto.GetAllDto]] GetAllSales() on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:56:35,382 [28   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:56:35,399 [28   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount], [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Sales] AS [s]
+INNER JOIN [Customers] AS [c] ON [s].[CustomerId] = [c].[Id]
+WHERE (@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))
+INFO  2025-08-30 14:56:35,407 [28   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:56:35,422 [27   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 14:56:35,428 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 14:56:35,433 [27   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host) in 55.0379ms
+INFO  2025-08-30 14:56:35,439 [27   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:56:35,457 [27   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/Sales/get-all - - - 200 466 application/json;+charset=utf-8 179.3398ms
+INFO  2025-08-30 14:57:24,998 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/SaleLineItems/insert application/json-patch+json 84
+INFO  2025-08-30 14:57:25,001 [28   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2025-08-30 14:57:25,005 [28   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host)'
+INFO  2025-08-30 14:57:25,011 [28   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "InsertSaleLineItem", controller = "SaleLineItems", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SmartPoultry.SaleLineItems.Dto.CreateSaleLineItemDto] InsertSaleLineItem(SmartPoultry.SaleLineItems.Dto.CreateSaleLineItemDto) on controller SmartPoultry.Web.Host.Controllers.SaleLineItemsController (SmartPoultry.Web.Host).
+INFO  2025-08-30 14:57:25,022 [28   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 14:57:25,055 [28   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[CategoryId], [i].[Description], [i].[Name], [i].[UnitOfMeasure]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__p_0
+DEBUG 2025-08-30 15:00:30,503 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2025-08-30 15:00:30,722 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2025-08-30 15:00:30,752 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.Web.Host.Startup.SmartPoultryWebHostModule, SmartPoultry.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,756 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.SmartPoultryWebCoreModule, SmartPoultry.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,758 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.SmartPoultryApplicationModule, SmartPoultry.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.EntityFrameworkCore.SmartPoultryEntityFrameworkModule, SmartPoultry.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.SmartPoultryCoreModule, SmartPoultry.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:30,767 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2025-08-30 15:00:30,860 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 15:00:30,860 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 15:00:30,860 [1    ] o.Configuration.LanguageManagementConfig - Converted SmartPoultry (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 15:00:30,860 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 15:00:31,397 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SmartPoultry.EntityFrameworkCore.SmartPoultryDbContext, SmartPoultry.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:00:31,657 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2025-08-30 15:00:31,704 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2025-08-30 15:00:31,717 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2025-08-30 15:00:31,722 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SmartPoultry
+DEBUG 2025-08-30 15:00:31,725 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+WARN  2025-08-30 15:00:33,533 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Edition' has a global query filter defined and is the required end of a relationship with the entity 'EditionFeatureSetting'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2025-08-30 15:00:33,538 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Purchase' has a global query filter defined and is the required end of a relationship with the entity 'PurchaseLineItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2025-08-30 15:00:33,542 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Sale' has a global query filter defined and is the required end of a relationship with the entity 'SaleLineItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2025-08-30 15:00:33,655 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'DueAmount' on entity type 'Sale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:00:33,659 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'PaidAmount' on entity type 'Sale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:00:33,663 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'TotalAmount' on entity type 'Sale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:00:33,668 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'Average' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:00:33,672 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'Rate' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:00:33,678 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'TotalAmount' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:00:33,681 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'Weight' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+INFO  2025-08-30 15:00:34,048 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:00:35,255 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[DisplayName], [a].[IsDeleted], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name]
+FROM [AbpEditions] AS [a]
+WHERE [a].[Name] = N'Standard'
+INFO  2025-08-30 15:00:35,525 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,536 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,541 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,547 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,551 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,555 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,560 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,565 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,569 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,574 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,585 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,590 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,595 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,617 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[Description], [a].[DisplayName], [a].[IsDefault], [a].[IsDeleted], [a].[IsStatic], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[NormalizedName], [a].[TenantId]
+FROM [AbpRoles] AS [a]
+WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = N'Admin')
+INFO  2025-08-30 15:00:35,702 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__adminRoleForHost_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Name]
+FROM [AbpPermissions] AS [a]
+WHERE ([a].[Discriminator] = N'RolePermissionSetting') AND (([a].[TenantId] IS NULL) AND ([a].[RoleId] = @__adminRoleForHost_Id_0))
+INFO  2025-08-30 15:00:35,726 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AuthenticationSource], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EmailAddress], [a].[EmailConfirmationCode], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockoutEnabled], [a].[IsPhoneNumberConfirmed], [a].[IsTwoFactorEnabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[LockoutEndDateUtc], [a].[Name], [a].[NormalizedEmailAddress], [a].[NormalizedUserName], [a].[Password], [a].[PasswordResetCode], [a].[PhoneNumber], [a].[SecurityStamp], [a].[Surname], [a].[TenantId], [a].[UserName]
+FROM [AbpUsers] AS [a]
+WHERE ([a].[TenantId] IS NULL) AND ([a].[UserName] = N'admin')
+INFO  2025-08-30 15:00:35,857 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND ([a].[TenantId] IS NULL)) AND ([a].[UserId] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,862 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND ([a].[TenantId] IS NULL)) AND ([a].[UserId] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:35,866 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND ([a].[TenantId] IS NULL)) AND ([a].[UserId] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:00:36,001 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConnectionString], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EditionId], [a].[IsActive], [a].[IsDeleted], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenancyName]
+FROM [AbpTenants] AS [a]
+WHERE [a].[TenancyName] = N'Default'
+INFO  2025-08-30 15:00:36,048 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[Description], [a].[DisplayName], [a].[IsDefault], [a].[IsDeleted], [a].[IsStatic], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[NormalizedName], [a].[TenantId]
+FROM [AbpRoles] AS [a]
+WHERE ([a].[TenantId] = @___tenantId_0) AND ([a].[Name] = N'Admin')
+INFO  2025-08-30 15:00:36,057 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@___tenantId_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Name]
+FROM [AbpPermissions] AS [a]
+WHERE ([a].[Discriminator] = N'RolePermissionSetting') AND (([a].[TenantId] = @___tenantId_0) AND ([a].[RoleId] = @__adminRole_Id_1))
+INFO  2025-08-30 15:00:36,069 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AuthenticationSource], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EmailAddress], [a].[EmailConfirmationCode], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockoutEnabled], [a].[IsPhoneNumberConfirmed], [a].[IsTwoFactorEnabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[LockoutEndDateUtc], [a].[Name], [a].[NormalizedEmailAddress], [a].[NormalizedUserName], [a].[Password], [a].[PasswordResetCode], [a].[PhoneNumber], [a].[SecurityStamp], [a].[Surname], [a].[TenantId], [a].[UserName]
+FROM [AbpUsers] AS [a]
+WHERE ([a].[TenantId] = @___tenantId_0) AND ([a].[UserName] = N'admin')
+DEBUG 2025-08-30 15:00:36,184 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2025-08-30 15:00:36,184 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2025-08-30 15:00:36,194 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Users.Dto.CreateUserDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Users.Dto.UserDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sessions.Dto.UserLoginInfoDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sales.Dto.CreateSaleDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sales.Dto.UpdateSaleDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Roles.Dto.PermissionDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.MultiTenancy.Dto.TenantDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Item.Dto.CreateItemDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Customer.Dto.CreateCustomerDto
+DEBUG 2025-08-30 15:00:36,195 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Category.Dto.CreateCategoryDto
+INFO  2025-08-30 15:00:36,620 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:00:36,653 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__ef_filter__p_1='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[DisplayName], [a].[Icon], [a].[IsDeleted], [a].[IsDisabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenantId]
+FROM [AbpLanguages] AS [a]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([a].[IsDeleted] = CAST(0 AS bit))) AND ((@__ef_filter__p_1 = CAST(1 AS bit)) OR ([a].[TenantId] IS NULL))
+INFO  2025-08-30 15:00:36,775 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:00:36,805 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenantId], [a].[UserId], [a].[Value]
+FROM [AbpSettings] AS [a]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([a].[TenantId] IS NULL)) AND (([a].[UserId] IS NULL) AND ([a].[TenantId] IS NULL))
+INFO  2025-08-30 15:00:36,862 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2025-08-30 15:00:37,338 [1    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2025-08-30 15:00:37,342 [1    ] Microsoft.Hosting.Lifetime               - Hosting environment: Production
+INFO  2025-08-30 15:00:37,346 [1    ] Microsoft.Hosting.Lifetime               - Content root path: D:\smart-poultry-backend\src\SmartPoultry.Web.Host
+INFO  2025-08-30 15:00:37,371 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/ - -
+INFO  2025-08-30 15:00:37,557 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.HomeController.Index (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:00:37,603 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SmartPoultry.Web.Host.Controllers.HomeController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:00:37,700 [13   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:00:38,026 [13   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (25ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:00:38,152 [13   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2025-08-30 15:00:38,168 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.HomeController.Index (SmartPoultry.Web.Host) in 551.929ms
+INFO  2025-08-30 15:00:38,172 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.HomeController.Index (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:00:38,223 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+INFO  2025-08-30 15:00:38,232 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/ - - - 302 - - 861.9345ms
+INFO  2025-08-30 15:00:38,603 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 369.5985ms
+INFO  2025-08-30 15:00:38,715 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - -
+INFO  2025-08-30 15:00:38,731 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - -
+INFO  2025-08-30 15:00:38,746 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 100.2981ms
+INFO  2025-08-30 15:00:38,838 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 116.8153ms
+INFO  2025-08-30 15:00:40,458 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - -
+INFO  2025-08-30 15:00:40,494 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.AntiForgeryController.SetCookie (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:00:40,498 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+INFO  2025-08-30 15:00:40,509 [3    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller SmartPoultry.Web.Host.Controllers.AntiForgeryController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:00:40,546 [3    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:00:40,854 [3    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (41ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:00:40,890 [3    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:00:41,294 [3    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.AntiForgeryController.SetCookie (SmartPoultry.Web.Host) in 778.7065ms
+INFO  2025-08-30 15:00:41,299 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.AntiForgeryController.SetCookie (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:00:41,309 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - - - 200 101 application/json;+charset=utf-8 851.9859ms
+INFO  2025-08-30 15:00:41,395 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 889.0813ms
+INFO  2025-08-30 15:01:20,251 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/SaleLineItems/insert application/json-patch+json 86
+INFO  2025-08-30 15:01:20,305 [8    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2025-08-30 15:01:20,383 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:01:20,424 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "InsertSaleLineItem", controller = "SaleLineItems", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SmartPoultry.SaleLineItems.Dto.CreateSaleLineItemDto] InsertSaleLineItem(SmartPoultry.SaleLineItems.Dto.CreateSaleLineItemDto) on controller SmartPoultry.Web.Host.Controllers.SaleLineItemsController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:01:20,694 [8    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:01:20,758 [13   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[CategoryId], [i].[Description], [i].[Name], [i].[UnitOfMeasure]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__p_0
+INFO  2025-08-30 15:01:28,431 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount]
+FROM [Sales] AS [s]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))) AND ([s].[Id] = @__p_0)
+INFO  2025-08-30 15:01:28,574 [13   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = Int32), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [SaleLineItems] ([Average], [ItemId], [Rate], [SaleId], [TotalAmount], [Weight])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [SaleLineItems]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:01:28,611 [13   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (15ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = Int32), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 50) (DbType = AnsiString), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Sales] SET [CreationTime] = @p0, [CreatorUserId] = @p1, [CustomerId] = @p2, [DeleterUserId] = @p3, [DeletionTime] = @p4, [DueAmount] = @p5, [DueDate] = @p6, [IsDeleted] = @p7, [LastModificationTime] = @p8, [LastModifierUserId] = @p9, [PaidAmount] = @p10, [Status] = @p11, [TotalAmount] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+INFO  2025-08-30 15:01:28,632 [13   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:01:28,653 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:01:28,662 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:01:28,669 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host) in 8241.7272ms
+INFO  2025-08-30 15:01:28,673 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:01:28,681 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/SaleLineItems/insert application/json-patch+json 86 - 200 164 application/json;+charset=utf-8 8425.8045ms
+INFO  2025-08-30 15:01:39,005 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/SaleLineItems/get-all - -
+INFO  2025-08-30 15:01:39,013 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.GetAllSaleLineItems (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:01:39,111 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSaleLineItems", controller = "SaleLineItems", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.SaleLineItems.Dto.GetSaleItemsDto]] GetAllSaleLineItems() on controller SmartPoultry.Web.Host.Controllers.SaleLineItemsController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:01:39,139 [22   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:01:39,290 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Average], [s].[ItemId], [s].[Rate], [s].[SaleId], [s].[TotalAmount], [s].[Weight], [i].[Id], [i].[CategoryId], [i].[Description], [i].[Name], [i].[UnitOfMeasure]
+FROM [SaleLineItems] AS [s]
+INNER JOIN [Items] AS [i] ON [s].[ItemId] = [i].[Id]
+INFO  2025-08-30 15:01:39,297 [22   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:01:39,312 [24   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:01:39,320 [24   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:01:39,343 [24   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SaleLineItemsController.GetAllSaleLineItems (SmartPoultry.Web.Host) in 228.3601ms
+INFO  2025-08-30 15:01:39,345 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.GetAllSaleLineItems (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:01:39,351 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/SaleLineItems/get-all - - - 200 515 application/json;+charset=utf-8 343.8415ms
+INFO  2025-08-30 15:01:54,574 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/Sales/get-all - -
+INFO  2025-08-30 15:01:54,578 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:01:54,590 [24   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSales", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.Sales.Dto.GetAllDto]] GetAllSales() on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:01:54,608 [24   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:01:54,669 [24   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount], [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Sales] AS [s]
+INNER JOIN [Customers] AS [c] ON [s].[CustomerId] = [c].[Id]
+WHERE (@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))
+INFO  2025-08-30 15:01:54,706 [24   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:01:54,716 [24   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:01:54,726 [24   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:01:54,754 [24   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host) in 160.7269ms
+INFO  2025-08-30 15:01:54,759 [24   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:01:54,770 [24   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/Sales/get-all - - - 200 471 application/json;+charset=utf-8 187.3548ms
+INFO  2025-08-30 15:03:55,351 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 PUT https://localhost:44311/api/Sales/update application/json-patch+json 115
+INFO  2025-08-30 15:03:55,356 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2025-08-30 15:03:55,361 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.UpdateSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:03:55,381 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "UpdateSale", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SmartPoultry.Sales.Dto.CreateSaleDto] UpdateSale(SmartPoultry.Sales.Dto.UpdateSaleDto) on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:03:55,441 [22   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:03:55,462 [25   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__p_0
+INFO  2025-08-30 15:03:55,477 [25   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount]
+FROM [Sales] AS [s]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))) AND ([s].[Id] = @__p_0)
+INFO  2025-08-30 15:03:55,505 [25   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = Int32), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 50) (DbType = AnsiString), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Sales] SET [CreationTime] = @p0, [CreatorUserId] = @p1, [CustomerId] = @p2, [DeleterUserId] = @p3, [DeletionTime] = @p4, [DueAmount] = @p5, [DueDate] = @p6, [IsDeleted] = @p7, [LastModificationTime] = @p8, [LastModifierUserId] = @p9, [PaidAmount] = @p10, [Status] = @p11, [TotalAmount] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+INFO  2025-08-30 15:03:55,522 [25   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:03:55,539 [25   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:03:55,546 [25   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:03:55,558 [25   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.UpdateSale (SmartPoultry.Web.Host) in 168.9959ms
+INFO  2025-08-30 15:03:55,562 [25   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.UpdateSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:03:55,580 [25   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 PUT https://localhost:44311/api/Sales/update application/json-patch+json 115 - 200 166 application/json;+charset=utf-8 215.0241ms
+INFO  2025-08-30 15:04:04,973 [25   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/Sales/get-all - -
+INFO  2025-08-30 15:04:04,977 [25   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:04:04,985 [25   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSales", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.Sales.Dto.GetAllDto]] GetAllSales() on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:04:05,107 [25   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:04:05,146 [25   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (34ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount], [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Sales] AS [s]
+INNER JOIN [Customers] AS [c] ON [s].[CustomerId] = [c].[Id]
+WHERE (@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))
+INFO  2025-08-30 15:04:05,155 [25   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:04:05,184 [27   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:04:05,190 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:04:05,193 [27   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host) in 205.7907ms
+INFO  2025-08-30 15:04:05,196 [27   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:04:05,209 [27   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/Sales/get-all - - - 200 472 application/json;+charset=utf-8 226.8120ms
+DEBUG 2025-08-30 15:10:05,925 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2025-08-30 15:10:06,148 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2025-08-30 15:10:06,166 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.Web.Host.Startup.SmartPoultryWebHostModule, SmartPoultry.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,168 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.SmartPoultryWebCoreModule, SmartPoultry.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.SmartPoultryApplicationModule, SmartPoultry.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.EntityFrameworkCore.SmartPoultryEntityFrameworkModule, SmartPoultry.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: SmartPoultry.SmartPoultryCoreModule, SmartPoultry.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,170 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,170 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,170 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,171 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,171 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,171 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,171 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,171 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,172 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=7.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:06,175 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2025-08-30 15:10:06,296 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 15:10:06,296 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 15:10:06,296 [1    ] o.Configuration.LanguageManagementConfig - Converted SmartPoultry (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 15:10:06,296 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2025-08-30 15:10:06,897 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: SmartPoultry.EntityFrameworkCore.SmartPoultryDbContext, SmartPoultry.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2025-08-30 15:10:07,266 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2025-08-30 15:10:07,321 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2025-08-30 15:10:07,335 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2025-08-30 15:10:07,340 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: SmartPoultry
+DEBUG 2025-08-30 15:10:07,344 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+WARN  2025-08-30 15:10:09,533 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Edition' has a global query filter defined and is the required end of a relationship with the entity 'EditionFeatureSetting'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2025-08-30 15:10:09,536 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Purchase' has a global query filter defined and is the required end of a relationship with the entity 'PurchaseLineItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2025-08-30 15:10:09,538 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Sale' has a global query filter defined and is the required end of a relationship with the entity 'SaleLineItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2025-08-30 15:10:09,652 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'DueAmount' on entity type 'Sale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:10:09,655 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'PaidAmount' on entity type 'Sale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:10:09,660 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'TotalAmount' on entity type 'Sale'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:10:09,663 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'Average' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:10:09,666 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'Rate' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:10:09,669 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'TotalAmount' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+WARN  2025-08-30 15:10:09,672 [1    ] oft.EntityFrameworkCore.Model.Validation - No store type was specified for the decimal property 'Weight' on entity type 'SaleLineItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+INFO  2025-08-30 15:10:10,115 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:10:11,555 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[DisplayName], [a].[IsDeleted], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name]
+FROM [AbpEditions] AS [a]
+WHERE [a].[Name] = N'Standard'
+INFO  2025-08-30 15:10:11,936 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (67ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:11,952 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:11,956 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:11,966 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:11,970 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:11,980 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:11,985 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:11,992 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:12,002 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:12,031 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (21ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:12,035 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:12,039 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:12,048 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:12,069 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[Description], [a].[DisplayName], [a].[IsDefault], [a].[IsDeleted], [a].[IsStatic], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[NormalizedName], [a].[TenantId]
+FROM [AbpRoles] AS [a]
+WHERE ([a].[TenantId] IS NULL) AND ([a].[Name] = N'Admin')
+INFO  2025-08-30 15:10:12,182 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@__adminRoleForHost_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Name]
+FROM [AbpPermissions] AS [a]
+WHERE ([a].[Discriminator] = N'RolePermissionSetting') AND (([a].[TenantId] IS NULL) AND ([a].[RoleId] = @__adminRoleForHost_Id_0))
+INFO  2025-08-30 15:10:12,204 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AuthenticationSource], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EmailAddress], [a].[EmailConfirmationCode], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockoutEnabled], [a].[IsPhoneNumberConfirmed], [a].[IsTwoFactorEnabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[LockoutEndDateUtc], [a].[Name], [a].[NormalizedEmailAddress], [a].[NormalizedUserName], [a].[Password], [a].[PasswordResetCode], [a].[PhoneNumber], [a].[SecurityStamp], [a].[Surname], [a].[TenantId], [a].[UserName]
+FROM [AbpUsers] AS [a]
+WHERE ([a].[TenantId] IS NULL) AND ([a].[UserName] = N'admin')
+INFO  2025-08-30 15:10:12,354 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND ([a].[TenantId] IS NULL)) AND ([a].[UserId] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:12,361 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND ([a].[TenantId] IS NULL)) AND ([a].[UserId] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:12,364 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND ([a].[TenantId] IS NULL)) AND ([a].[UserId] IS NULL)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2025-08-30 15:10:12,537 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConnectionString], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EditionId], [a].[IsActive], [a].[IsDeleted], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenancyName]
+FROM [AbpTenants] AS [a]
+WHERE [a].[TenancyName] = N'Default'
+INFO  2025-08-30 15:10:12,585 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[Description], [a].[DisplayName], [a].[IsDefault], [a].[IsDeleted], [a].[IsStatic], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[NormalizedName], [a].[TenantId]
+FROM [AbpRoles] AS [a]
+WHERE ([a].[TenantId] = @___tenantId_0) AND ([a].[Name] = N'Admin')
+INFO  2025-08-30 15:10:12,595 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@___tenantId_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Name]
+FROM [AbpPermissions] AS [a]
+WHERE ([a].[Discriminator] = N'RolePermissionSetting') AND (([a].[TenantId] = @___tenantId_0) AND ([a].[RoleId] = @__adminRole_Id_1))
+INFO  2025-08-30 15:10:12,610 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AuthenticationSource], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EmailAddress], [a].[EmailConfirmationCode], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockoutEnabled], [a].[IsPhoneNumberConfirmed], [a].[IsTwoFactorEnabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[LockoutEndDateUtc], [a].[Name], [a].[NormalizedEmailAddress], [a].[NormalizedUserName], [a].[Password], [a].[PasswordResetCode], [a].[PhoneNumber], [a].[SecurityStamp], [a].[Surname], [a].[TenantId], [a].[UserName]
+FROM [AbpUsers] AS [a]
+WHERE ([a].[TenantId] = @___tenantId_0) AND ([a].[UserName] = N'admin')
+DEBUG 2025-08-30 15:10:12,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2025-08-30 15:10:12,773 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2025-08-30 15:10:12,785 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Users.Dto.CreateUserDto
+DEBUG 2025-08-30 15:10:12,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Users.Dto.UserDto
+DEBUG 2025-08-30 15:10:12,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2025-08-30 15:10:12,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sessions.Dto.UserLoginInfoDto
+DEBUG 2025-08-30 15:10:12,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sales.Dto.CreateSaleDto
+DEBUG 2025-08-30 15:10:12,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Sales.Dto.UpdateSaleDto
+DEBUG 2025-08-30 15:10:12,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Roles.Dto.PermissionDto
+DEBUG 2025-08-30 15:10:12,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2025-08-30 15:10:12,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.MultiTenancy.Dto.TenantDto
+DEBUG 2025-08-30 15:10:12,786 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Item.Dto.CreateItemDto
+DEBUG 2025-08-30 15:10:12,787 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Customer.Dto.CreateCustomerDto
+DEBUG 2025-08-30 15:10:12,787 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - SmartPoultry.Category.Dto.CreateCategoryDto
+INFO  2025-08-30 15:10:13,406 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:10:13,439 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__ef_filter__p_1='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[DisplayName], [a].[Icon], [a].[IsDeleted], [a].[IsDisabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenantId]
+FROM [AbpLanguages] AS [a]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([a].[IsDeleted] = CAST(0 AS bit))) AND ((@__ef_filter__p_1 = CAST(1 AS bit)) OR ([a].[TenantId] IS NULL))
+INFO  2025-08-30 15:10:13,620 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:10:13,653 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenantId], [a].[UserId], [a].[Value]
+FROM [AbpSettings] AS [a]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([a].[TenantId] IS NULL)) AND (([a].[UserId] IS NULL) AND ([a].[TenantId] IS NULL))
+INFO  2025-08-30 15:10:13,715 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2025-08-30 15:10:14,315 [1    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2025-08-30 15:10:14,318 [1    ] Microsoft.Hosting.Lifetime               - Hosting environment: Production
+INFO  2025-08-30 15:10:14,321 [1    ] Microsoft.Hosting.Lifetime               - Content root path: D:\smart-poultry-backend\src\SmartPoultry.Web.Host
+INFO  2025-08-30 15:10:14,353 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/ - -
+INFO  2025-08-30 15:10:14,603 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.HomeController.Index (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:10:14,671 [3    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SmartPoultry.Web.Host.Controllers.HomeController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:10:14,766 [3    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:10:15,260 [3    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (29ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:10:15,469 [3    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2025-08-30 15:10:15,495 [3    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.HomeController.Index (SmartPoultry.Web.Host) in 802.9686ms
+INFO  2025-08-30 15:10:15,504 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.HomeController.Index (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:10:15,564 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+INFO  2025-08-30 15:10:15,578 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/ - - - 302 - - 1224.2115ms
+INFO  2025-08-30 15:10:16,304 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 739.3371ms
+INFO  2025-08-30 15:10:16,466 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - -
+INFO  2025-08-30 15:10:16,479 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 13.3272ms
+INFO  2025-08-30 15:10:16,492 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - -
+INFO  2025-08-30 15:10:16,574 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 80.3996ms
+INFO  2025-08-30 15:10:18,423 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - -
+INFO  2025-08-30 15:10:18,431 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.AntiForgeryController.SetCookie (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:10:18,439 [3    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller SmartPoultry.Web.Host.Controllers.AntiForgeryController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:10:18,455 [3    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:10:18,476 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:10:18,498 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+INFO  2025-08-30 15:10:18,503 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:10:18,775 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.AntiForgeryController.SetCookie (SmartPoultry.Web.Host) in 332.0213ms
+INFO  2025-08-30 15:10:18,779 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.AntiForgeryController.SetCookie (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:10:18,787 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - - - 200 101 application/json;+charset=utf-8 362.3950ms
+INFO  2025-08-30 15:10:18,894 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 392.2937ms
+INFO  2025-08-30 15:11:54,817 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/Sales/insert application/json-patch+json 83
+INFO  2025-08-30 15:11:54,842 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2025-08-30 15:11:54,885 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.InsertSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:11:54,923 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "InsertSale", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SmartPoultry.Sales.Dto.CreateSaleDto] InsertSale(SmartPoultry.Sales.Dto.CreateSaleDto) on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:11:55,081 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing BadRequestObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:11:55,168 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.InsertSale (SmartPoultry.Web.Host) in 242.7213ms
+INFO  2025-08-30 15:11:55,171 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.InsertSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:11:55,185 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/Sales/insert application/json-patch+json 83 - 400 413 application/problem+json;+charset=utf-8 359.8518ms
+INFO  2025-08-30 15:12:10,305 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/Sales/insert application/json-patch+json 84
+INFO  2025-08-30 15:12:10,310 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2025-08-30 15:12:10,317 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.InsertSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:12:10,405 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "InsertSale", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SmartPoultry.Sales.Dto.CreateSaleDto] InsertSale(SmartPoultry.Sales.Dto.CreateSaleDto) on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:12:10,508 [22   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:12:10,582 [3    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__p_0
+INFO  2025-08-30 15:12:10,836 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = Int32), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 50) (DbType = AnsiString), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Sales] ([CreationTime], [CreatorUserId], [CustomerId], [DeleterUserId], [DeletionTime], [DueAmount], [DueDate], [IsDeleted], [LastModificationTime], [LastModifierUserId], [PaidAmount], [Status], [TotalAmount])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+SELECT [Id]
+FROM [Sales]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:12:10,858 [5    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:12:10,913 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:12:10,924 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:12:10,954 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.InsertSale (SmartPoultry.Web.Host) in 535.093ms
+INFO  2025-08-30 15:12:10,962 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.InsertSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:12:11,020 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/Sales/insert application/json-patch+json 84 - 200 168 application/json;+charset=utf-8 660.4055ms
+INFO  2025-08-30 15:12:21,494 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/Sales/get-all - -
+INFO  2025-08-30 15:12:21,498 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:12:21,585 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSales", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.Sales.Dto.GetAllDto]] GetAllSales() on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:12:21,622 [22   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:12:21,746 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount], [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Sales] AS [s]
+INNER JOIN [Customers] AS [c] ON [s].[CustomerId] = [c].[Id]
+WHERE (@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))
+INFO  2025-08-30 15:12:21,762 [22   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:12:21,773 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:12:21,781 [23   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:12:21,794 [23   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host) in 204.9865ms
+INFO  2025-08-30 15:12:21,823 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:12:21,833 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/Sales/get-all - - - 200 652 application/json;+charset=utf-8 334.7579ms
+INFO  2025-08-30 15:12:57,385 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:44311/api/SaleLineItems/insert application/json-patch+json 84
+INFO  2025-08-30 15:12:57,389 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2025-08-30 15:12:57,392 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:12:57,411 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "InsertSaleLineItem", controller = "SaleLineItems", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SmartPoultry.SaleLineItems.Dto.CreateSaleLineItemDto] InsertSaleLineItem(SmartPoultry.SaleLineItems.Dto.CreateSaleLineItemDto) on controller SmartPoultry.Web.Host.Controllers.SaleLineItemsController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:12:57,463 [5    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:12:57,487 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[CategoryId], [i].[Description], [i].[Name], [i].[UnitOfMeasure]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__p_0
+INFO  2025-08-30 15:12:57,564 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount]
+FROM [Sales] AS [s]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))) AND ([s].[Id] = @__p_0)
+INFO  2025-08-30 15:12:57,623 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Int32), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (DbType = Int32), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [SaleLineItems] ([Average], [ItemId], [Rate], [SaleId], [TotalAmount], [Weight])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [SaleLineItems]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:12:57,641 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = Int32), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 50) (DbType = AnsiString), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Sales] SET [CreationTime] = @p0, [CreatorUserId] = @p1, [CustomerId] = @p2, [DeleterUserId] = @p3, [DeletionTime] = @p4, [DueAmount] = @p5, [DueDate] = @p6, [IsDeleted] = @p7, [LastModificationTime] = @p8, [LastModifierUserId] = @p9, [PaidAmount] = @p10, [Status] = @p11, [TotalAmount] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+INFO  2025-08-30 15:12:57,651 [5    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:12:57,660 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:12:57,663 [23   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:12:57,669 [23   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host) in 254.0649ms
+INFO  2025-08-30 15:12:57,673 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SaleLineItemsController.InsertSaleLineItem (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:12:57,690 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:44311/api/SaleLineItems/insert application/json-patch+json 84 - 200 164 application/json;+charset=utf-8 292.3924ms
+INFO  2025-08-30 15:13:07,804 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/Sales/get-all - -
+INFO  2025-08-30 15:13:07,808 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:13:07,817 [23   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSales", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.Sales.Dto.GetAllDto]] GetAllSales() on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:13:07,837 [23   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:13:07,907 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount], [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Sales] AS [s]
+INNER JOIN [Customers] AS [c] ON [s].[CustomerId] = [c].[Id]
+WHERE (@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))
+INFO  2025-08-30 15:13:07,916 [23   ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:13:07,932 [23   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:13:07,943 [23   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:13:07,950 [23   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host) in 126.8301ms
+INFO  2025-08-30 15:13:07,956 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:13:07,981 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/Sales/get-all - - - 200 660 application/json;+charset=utf-8 157.5459ms
+INFO  2025-08-30 15:14:12,721 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 PUT https://localhost:44311/api/Sales/update application/json-patch+json 123
+INFO  2025-08-30 15:14:12,728 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2025-08-30 15:14:12,732 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.UpdateSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:14:12,755 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "UpdateSale", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[SmartPoultry.Sales.Dto.CreateSaleDto] UpdateSale(SmartPoultry.Sales.Dto.UpdateSaleDto) on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:14:12,804 [5    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:14:12,825 [9    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @__p_0
+INFO  2025-08-30 15:14:12,834 [9    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount]
+FROM [Sales] AS [s]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))) AND ([s].[Id] = @__p_0)
+INFO  2025-08-30 15:14:12,856 [5    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@p13='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int64), @p2='?' (DbType = Int32), @p3='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 50) (DbType = AnsiString), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Sales] SET [CreationTime] = @p0, [CreatorUserId] = @p1, [CustomerId] = @p2, [DeleterUserId] = @p3, [DeletionTime] = @p4, [DueAmount] = @p5, [DueDate] = @p6, [IsDeleted] = @p7, [LastModificationTime] = @p8, [LastModifierUserId] = @p9, [PaidAmount] = @p10, [Status] = @p11, [TotalAmount] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+INFO  2025-08-30 15:14:12,865 [5    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:14:12,875 [8    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:14:12,883 [8    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:14:12,887 [8    ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.UpdateSale (SmartPoultry.Web.Host) in 128.0737ms
+INFO  2025-08-30 15:14:12,892 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.UpdateSale (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:14:12,924 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 PUT https://localhost:44311/api/Sales/update application/json-patch+json 123 - 200 174 application/json;+charset=utf-8 176.9574ms
+INFO  2025-08-30 15:14:23,286 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/api/Sales/get-all - -
+INFO  2025-08-30 15:14:23,291 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:14:23,301 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAllSales", controller = "Sales", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[SmartPoultry.Sales.Dto.GetAllDto]] GetAllSales() on controller SmartPoultry.Web.Host.Controllers.SalesController (SmartPoultry.Web.Host).
+INFO  2025-08-30 15:14:23,313 [8    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:14:23,324 [8    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreationTime], [s].[CreatorUserId], [s].[CustomerId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DueAmount], [s].[DueDate], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[PaidAmount], [s].[Status], [s].[TotalAmount], [c].[Id], [c].[Address], [c].[IsSupplier], [c].[Name], [c].[Phone]
+FROM [Sales] AS [s]
+INNER JOIN [Customers] AS [c] ON [s].[CustomerId] = [c].[Id]
+WHERE (@__ef_filter__p_0 = CAST(1 AS bit)) OR ([s].[IsDeleted] = CAST(0 AS bit))
+INFO  2025-08-30 15:14:23,332 [8    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.4 initialized 'SmartPoultryDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.4' with options: None
+INFO  2025-08-30 15:14:23,353 [22   ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2025-08-30 15:14:23,360 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2025-08-30 15:14:23,366 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host) in 59.6213ms
+INFO  2025-08-30 15:14:23,369 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'SmartPoultry.Web.Host.Controllers.SalesController.GetAllSales (SmartPoultry.Web.Host)'
+INFO  2025-08-30 15:14:23,384 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/api/Sales/get-all - - - 200 669 application/json;+charset=utf-8 90.7526ms

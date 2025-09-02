@@ -10,6 +10,8 @@ namespace SmartPoultry.SaleLineItems.Dto
     {
         public int Id { get; set; }
         public int ItemId { get; set; }
-        public double Quantity { get; set; }
+        public decimal Average { get; set; }
+        public decimal Rate { get; set; }
+        public decimal Weight { get; set; }
     }
 }
