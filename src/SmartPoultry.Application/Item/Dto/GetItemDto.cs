@@ -11,8 +11,6 @@ namespace SmartPoultry.Item.Dto
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Quantity { get; set; }
-        public double Price { get; set; }
         public string UnitOfMeasure { get; set; }
         public string Description { get; set; }
         public Models.Category Category { get; set; }
