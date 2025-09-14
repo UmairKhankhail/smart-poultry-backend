@@ -17,9 +17,9 @@ namespace SmartPoultry.SaleLineItems
     {
         private readonly SaleLineItemsRepository _saleLineItemsRepository;
         private readonly IItemService _itemService;
-        private readonly ISalesService _salesService;
+        private readonly ISaleService _salesService;
         private readonly IMapper _mapper;
-        public SaleLineItemsService(SaleLineItemsRepository saleLineItemsRepository, IItemService itemService, IMapper mapper, ISalesService salesService) 
+        public SaleLineItemsService(SaleLineItemsRepository saleLineItemsRepository, IItemService itemService, IMapper mapper, ISaleService salesService) 
         {
             _saleLineItemsRepository = saleLineItemsRepository;
             _itemService = itemService;

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SmartPoultry.Sales
 {
-    public interface ISalesService : IApplicationService
+    public interface ISaleService : IApplicationService
     {
         Task<List<GetAllDto>> GetAllSalesAsync();
         Task<CreateSaleDto> InsertSaleAsync(CreateSaleDto sale);

@@ -15,7 +15,7 @@ using static SmartPoultry.Shared.ApplicationContants;
 namespace SmartPoultry.Sales
 {
     [RemoteService(false)]
-    public class SalesService : ISalesService
+    public class SalesService : ISaleService
     {
         private readonly SaleRepository _saleRepository;
         private readonly CustomerRepository _customerRepository;

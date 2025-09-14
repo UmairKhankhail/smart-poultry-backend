@@ -9,9 +9,9 @@ namespace SmartPoultry.Models
     {
         [ForeignKey(nameof(Supplier))]
         public int SupplierId { get; set; }
-        public double TotalAmount { get; set; }
-        public double PaidAmount { get; set; }
-        public double DueAmount { get; set; }
+        public decimal TotalAmount { get; set; }
+        public decimal PaidAmount { get; set; }
+        public decimal DueAmount { get; set; }
         public DateTime DueDate { get; set; }
         public string Status { get; set; }
 
