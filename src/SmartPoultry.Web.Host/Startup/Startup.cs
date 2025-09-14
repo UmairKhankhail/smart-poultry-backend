@@ -159,7 +159,9 @@ namespace SmartPoultry.Web.Host.Startup
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey
                 });
-
+              
+                options.CustomSchemaIds(type => type.FullName); // Use full name instead of just class name
+               
                 //add summaries to swagger
                 bool canShowSummaries = _appConfiguration.GetValue<bool>("Swagger:ShowSummaries");
                 if (canShowSummaries)
