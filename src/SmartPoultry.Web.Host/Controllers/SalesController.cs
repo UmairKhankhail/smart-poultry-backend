@@ -12,8 +12,8 @@ namespace SmartPoultry.Web.Host.Controllers
     [ApiController]
     public class SalesController : SmartPoultryControllerBase
     {
-        private readonly ISaleService _salesService;
-        public SalesController(ISaleService salesService)
+        private readonly ISalesService _salesService;
+        public SalesController(ISalesService salesService)
         {
             _salesService= salesService;
         }
